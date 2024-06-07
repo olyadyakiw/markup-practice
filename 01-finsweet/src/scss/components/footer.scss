@@ -1,0 +1,109 @@
+.footer {
+    padding-top: 6rem;
+    padding-bottom: 5.5rem;
+    background-color: var(--color-black);
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 5.5rem;
+        @include media("<phone") {
+            flex-direction: column;
+            align-items: start;
+            gap: 4rem;
+        }
+    }
+    &__list {
+        display: flex;
+        margin-bottom: 0;
+        gap: 2.4rem;
+        @include media("<phone") {
+            flex-wrap: wrap;
+        }
+    }
+    &__list-link {
+        color: var(--color-white);
+        &:hover {
+            color: var(--color-yellow);
+            opacity: 1;
+        }
+    }
+    &__content {
+        padding: 8rem 6.4rem;
+        background-color: rgba(#fff, .05);
+        display: flex;
+        justify-content: space-between;
+        gap: 6.4rem;
+        margin-bottom: 4.8rem;
+        @include media("<desktop") {
+            flex-direction: column;
+            padding: 6rem 4rem;
+            gap: 3.2rem;
+        }
+    }
+    &__title {
+        max-width: 56rem;
+        width: 100%;
+        color: var(--color-white);
+        margin-bottom: 0;
+        @include media("<desktop") {
+            max-width: 100%;
+        }
+    }
+    &__form {
+        display: flex;
+        gap: 2.4rem;
+        align-items: start;
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-end;
+        @include media("<desktop") {
+            justify-content: start;
+        }
+        @include media("<phone") {
+            flex-direction: column;
+        }
+        .btn {
+            @include media("<phone") {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    &__input {
+        border: 1px solid var(--color-grey-dark);
+        height: 56.7px;
+        padding: 15px;
+        background-color: transparent;
+        max-width: 320px;
+        width: 100%;
+        line-height: 1.75;
+        font-size: 16px;
+        color: var(--color-white);
+        &::placeholder {
+            color: var(--color-grey-medium)
+        }
+        &:focus {
+            border-width: 2px;
+            outline: none;
+        }
+        @include media("<desktop") {
+            max-width: 100%;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        @include media("<phone") {
+            flex-direction: column-reverse;
+        }
+    }
+    &__text {
+        color: rgba(#fff, .7);
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

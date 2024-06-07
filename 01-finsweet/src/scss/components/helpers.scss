@@ -1,0 +1,97 @@
+$media-expressions: (
+	"iphoneX":
+		"(min-width: 812px) and (max-height: 414px) and (orientation: landscape)",
+	"screen": "screen",
+	"print": "print",
+	"handheld": "handheld",
+	"landscape": "(orientation: landscape)",
+	"portrait": "(orientation: portrait)",
+	"retina2x": "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)",
+	"retina3x": "(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)"
+);
+
+//breakpoints
+$breakpoints: (
+	"full": 1920px,
+	"xl": 1680px,
+	"macbook": 1440px,
+	"ipad-pro": 1366px,
+	"desktop-md": 1200px,
+	"desktop": 1024px,
+	"tablet": 768px,
+	"phone": 667px,
+	"phone-md": 568px,
+	"phone-sm": 480px,
+	"phone-xs": 375px
+);
+
+$sides: (top, bottom, left, right);
+
+@for $i from 0 through 50 {
+	@each $side in $sides {
+		._m#{str-slice($side, 0, 1)}-#{$i} {
+			margin-#{$side}: #{$i}rem !important;
+		}
+		._p#{str-slice($side, 0, 1)}-#{$i} {
+			padding-#{$side}: #{$i}rem !important;
+		}
+	}
+	
+	._py-#{$i} {
+		padding-top: #{$i}rem !important;
+		padding-bottom: #{$i}rem !important;
+	}
+	
+	._px-#{$i} {
+		padding-left: #{$i}rem !important;
+		padding-right: #{$i}rem !important;
+	}
+}
+
+@for $i from 0 through 50 {
+	@each $side in $sides {
+		@include media(">=tablet") {
+			._m#{str-slice($side, 0, 1)}-md-#{$i} {
+				margin-#{$side}: #{$i}rem !important;
+			}
+			
+			._p#{str-slice($side, 0, 1)}-md-#{$i} {
+				padding-#{$side}: #{$i}rem !important;
+			}
+			
+			._py-md-#{$i} {
+				padding-top: #{$i}rem !important;
+				padding-bottom: #{$i}rem !important;
+			}
+			
+			._px-md-#{$i} {
+				padding-left: #{$i}rem !important;
+				padding-right: #{$i}rem !important;
+			}
+		}
+	}
+}
+
+@for $i from 0 through 50 {
+	@each $side in $sides {
+		@include media(">=desktop-md") {
+			._m#{str-slice($side, 0, 1)}-lg-#{$i} {
+				margin-#{$side}: #{$i}rem !important;
+			}
+			
+			._p#{str-slice($side, 0, 1)}-lg-#{$i} {
+				padding-#{$side}: #{$i}rem !important;
+			}
+			
+			._py-lg-#{$i} {
+				padding-top: #{$i}rem !important;
+				padding-bottom: #{$i}rem !important;
+			}
+			
+			._px-lg-#{$i} {
+				padding-left: #{$i}rem !important;
+				padding-right: #{$i}rem !important;
+			}
+		}
+	}
+}
