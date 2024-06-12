@@ -28,6 +28,8 @@
 html,
 body {
 	height: 100%;
+	overflow-x: hidden;
+	position: relative;
 }
 
 body {
@@ -37,13 +39,16 @@ body {
 .wrapper {
 	display: flex;
 	overflow-x: hidden;
+	@include media("<phone") {
+		overflow: hidden;
+	}
 }
 
 // Aside
 
 .dashboard-aside {
 	padding: 36px 28px 72px;
-	height: 100vh;
+	height: 100dvh;
 	background-color: var(--color-white);
 	box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.50);
 	max-width: 300px;
@@ -56,14 +61,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	@include media("<desktop-md") {
-		left: calc(-307px);
+		left: -305pxx;
 		max-width: 375px;
+		width: 100%;
 		padding-right: 70px;
 		transition: all .4s !important;
-		@include media("<phone") {
-			left: calc(-100% + 50px);
-			padding-right: 50px;
-		}
+	}
+	@include media("<=phone") {
+		padding-right: 50px;
+		left: -325px;
 	}
 	&.active {
 		@include media("<desktop-md") {
@@ -106,8 +112,9 @@ body {
 
 		@include media("<phone") {
 			width: 24px;
-			height: 20px;
+			height: 24px;
 			right: 13px;
+			top: 40px;
 		}
 
 		&:before,
@@ -243,10 +250,11 @@ body {
 	width: 100%;
 	margin-left: 300px;
 	@include media("<desktop-md") {
-		margin-left: auto;
+		margin-left: 70px;
 		width: calc(100% - 70px);
-	}
-	@include media("<phone") {
+		}
+		@include media("<phone") {
+		margin-left: 50px;
 		width: calc(100% - 50px);
 	}
 	&__container {
@@ -283,6 +291,7 @@ body {
 		@include media("<phone") {
 			flex-direction: column;
 			gap: 2rem;
+			align-items: start;
 		}
 	}
 	&__title {
