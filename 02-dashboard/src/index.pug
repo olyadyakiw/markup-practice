@@ -1,0 +1,29 @@
+include ./pug/head.pug
+
+body 
+    .wrapper 
+        include ./pug/aside.pug
+
+        main.main 
+            .main__container 
+                h1.main__title(data-aos="fade-in" data-aos-delay="300") Hello Evano 👋🏼,
+                .main__content(data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200")
+                    .product
+                        .product__top 
+                            .product__header 
+                                h2.product__title All Customers
+                                h3.product__info Active Members
+                            form.search 
+                                svg.search__icon(width="20" height="20") 
+                                    use(href="img/sprite-icons.svg#search") 
+                                input.search__input(type="search" placeholder="Search")
+
+                        include ./pug/table.pug
+
+                        .product__footer 
+                            p.product__text Showing data 1 to 8 of  256K entries
+
+                            include ./pug/pagination.pug
+                    
+
+include ./pug/includes.pug

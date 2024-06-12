@@ -1,0 +1,59 @@
+aside.dashboard-aside(data-aos="fade-right")
+    a.logo(href="#") 
+        svg(width="37" height="37")
+            use(href="img/sprite-icons.svg#logo")
+        span Dashboard
+        span v.01
+    button.dashboard-aside__opener
+        span
+    
+    nav.dashboard-menu
+        ul.dashboard-menu__list 
+            li.dashboard-menu__item 
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#key-square") 
+                    span Dashboard
+            li.dashboard-menu__item               
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#3d-square") 
+                    span Product   
+                        svg(width="6" height="10")
+                            use(href="img/sprite-icons.svg#chevron-right") 
+            li.dashboard-menu__item.active            
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#user-square") 
+                    span Customers
+                        svg(width="6" height="10")
+                            use(href="img/sprite-icons.svg#chevron-right") 
+            li.dashboard-menu__item              
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#wallet-money") 
+                    span Income
+                        svg(width="6" height="10")
+                            use(href="img/sprite-icons.svg#chevron-right") 
+            li.dashboard-menu__item              
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#discount-shape") 
+                    span Promote
+                        svg(width="6" height="10")
+                            use(href="img/sprite-icons.svg#chevron-right") 
+            li.dashboard-menu__item         
+                a.dashboard-menu__link(href="#")
+                    svg(width="24" height="24")
+                        use(href="img/sprite-icons.svg#message-question") 
+                    span Help 
+                        svg(width="6" height="10")
+                            use(href="img/sprite-icons.svg#chevron-right")          
+
+    .profile-card 
+        .profile-card__visual 
+            img.profile-card__img(src="@img/avatar.jpg", alt="avatar")
+        .profile-card__content 
+            .profile-card__title Evano
+            .profile-card__position Project Manager
+

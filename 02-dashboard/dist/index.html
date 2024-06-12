@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Dashboard</title>
+  </head>
+<body>
+ 
+  <div class="wrapper"> 
+    <aside class="dashboard-aside" data-aos="fade-right"><a class="logo" href="#"> 
+        <svg width="37" height="37">
+          <use href="img/sprite-icons.svg#logo"></use>
+        </svg><span>Dashboard</span><span>v.01</span></a>
+      <button class="dashboard-aside__opener"><span></span></button>
+      <nav class="dashboard-menu">
+        <ul class="dashboard-menu__list"> 
+          <li class="dashboard-menu__item"> <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#key-square"> </use>
+              </svg><span>Dashboard</span></a></li>
+          <li class="dashboard-menu__item">              <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#3d-square"> </use>
+              </svg><span>Product   
+                <svg width="6" height="10">
+                  <use href="img/sprite-icons.svg#chevron-right"> </use>
+                </svg></span></a></li>
+          <li class="dashboard-menu__item active">           <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#user-square"> </use>
+              </svg><span>Customers
+                <svg width="6" height="10">
+                  <use href="img/sprite-icons.svg#chevron-right"> </use>
+                </svg></span></a></li>
+          <li class="dashboard-menu__item">             <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#wallet-money"> </use>
+              </svg><span>Income
+                <svg width="6" height="10">
+                  <use href="img/sprite-icons.svg#chevron-right"> </use>
+                </svg></span></a></li>
+          <li class="dashboard-menu__item">             <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#discount-shape"> </use>
+              </svg><span>Promote
+                <svg width="6" height="10">
+                  <use href="img/sprite-icons.svg#chevron-right"> </use>
+                </svg></span></a></li>
+          <li class="dashboard-menu__item">        <a class="dashboard-menu__link" href="#">
+              <svg width="24" height="24">
+                <use href="img/sprite-icons.svg#message-question"> </use>
+              </svg><span>Help 
+                <svg width="6" height="10">
+                  <use href="img/sprite-icons.svg#chevron-right">         </use>
+                </svg></span></a></li>
+        </ul>
+      </nav>
+      <div class="profile-card"> 
+        <div class="profile-card__visual"> <picture><source srcset="img/avatar.webp, img/avatar@2x.webp 2x" type="image/webp"><img class="profile-card__img" src="img/avatar.jpg" alt="avatar" srcset="img/avatar@2x.jpg 2x"></picture></div>
+        <div class="profile-card__content"> 
+          <div class="profile-card__title">Evano</div>
+          <div class="profile-card__position">Project Manager</div>
+        </div>
+      </div>
+    </aside>
+    <main class="main"> 
+      <div class="main__container"> 
+        <h1 class="main__title" data-aos="fade-in" data-aos-delay="300">Hello Evano 👋🏼,</h1>
+        <div class="main__content" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1200">
+          <div class="product">
+            <div class="product__top"> 
+              <div class="product__header"> 
+                <h2 class="product__title">All Customers</h2>
+                <h3 class="product__info">Active Members</h3>
+              </div>
+              <form class="search"> 
+                <svg class="search__icon" width="20" height="20"> 
+                  <use href="img/sprite-icons.svg#search"> </use>
+                </svg>
+                <input class="search__input" type="search" placeholder="Search">
+              </form>
+            </div>
+            <div class="table-responsive">
+              <table class="table-customers"> 
+                <thead class="table-customers__head">
+                  <tr class="table-customers__row"> 
+                    <th class="table-customers__cell">Customer Name</th>
+                    <th class="table-customers__cell">Company</th>
+                    <th class="table-customers__cell">Phone Number</th>
+                    <th class="table-customers__cell">Email</th>
+                    <th class="table-customers__cell">Country</th>
+                    <th class="table-customers__cell">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="table-customers__body"> 
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Jane Cooper</td>
+                    <td class="table-customers__cell">Microsoft</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(225) 555-0118</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">jane@microsoft.com</a></td>
+                    <td class="table-customers__cell">United States</td>
+                    <td class="table-customers__cell"><span class="status-tag active">Active </span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Floyd Miles</td>
+                    <td class="table-customers__cell">Yahoo</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(205) 555-0100</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">floyd@yahoo.com</a></td>
+                    <td class="table-customers__cell">Kiribati</td>
+                    <td class="table-customers__cell"><span class="status-tag inactive">Inactive</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Ronald Richards</td>
+                    <td class="table-customers__cell">Adobe</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(302) 555-0107</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">ronald@adobe.com</a></td>
+                    <td class="table-customers__cell">Israel</td>
+                    <td class="table-customers__cell"><span class="status-tag inactive">Inactive</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Marvin McKinney</td>
+                    <td class="table-customers__cell">Tesla</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(252) 555-0126</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">marvin@tesla.com</a></td>
+                    <td class="table-customers__cell">Iran</td>
+                    <td class="table-customers__cell"><span class="status-tag active">Active</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Jerome Bell</td>
+                    <td class="table-customers__cell">Google</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(629) 555-0129</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">jerome@google.com</a></td>
+                    <td class="table-customers__cell">Réunion</td>
+                    <td class="table-customers__cell"><span class="status-tag active">Active</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Kathryn Murphy</td>
+                    <td class="table-customers__cell">Microsoft</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(406) 555-0120</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">kathryn@microsoft.com</a></td>
+                    <td class="table-customers__cell">Curaçao</td>
+                    <td class="table-customers__cell"><span class="status-tag active">Active</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Jacob Jones</td>
+                    <td class="table-customers__cell">Yahoo</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(208) 555-0112</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">jacob@yahoo.com</a></td>
+                    <td class="table-customers__cell">Brazil</td>
+                    <td class="table-customers__cell"><span class="status-tag active">Active</span></td>
+                  </tr>
+                  <tr class="table-customers__row">
+                    <td class="table-customers__cell">Kristin Watson</td>
+                    <td class="table-customers__cell">Facebook</td>
+                    <td class="table-customers__cell"><a href="tel:4065550120">(704) 555-0127</a></td>
+                    <td class="table-customers__cell"><a href="mailto:jane@microsoft.com">kristin@facebook.com</a></td>
+                    <td class="table-customers__cell">Åland Islands</td>
+                    <td class="table-customers__cell"><span class="status-tag inactive">Inactive</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="product__footer"> 
+              <p class="product__text">Showing data 1 to 8 of  256K entries</p>
+              <div class="pagination"> 
+                <button class="pagination__btn" type="button">&lt;</button>
+                <button class="pagination__btn active" type="button">1</button>
+                <button class="pagination__btn" type="button">2</button>
+                <button class="pagination__btn" type="button">3</button>
+                <button class="pagination__btn" type="button">4</button>
+                <button class="pagination__btn no-box" type="button">...</button>
+                <button class="pagination__btn" type="button">40</button>
+                <button class="pagination__btn" type="button">&gt;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+<script src="js/app.min.js" defer=""></script></body></html>

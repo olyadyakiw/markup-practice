@@ -1,0 +1,35 @@
+// fonts
+
+$ff-poppins: 'Poppins';
+
+$base-main-font: $ff-poppins;
+$base-font-sans-serif: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $base-font;
+
+// Container
+$gutter: 20px;
+$container: (
+	"default": 1180px,
+	// "lg": 1400px
+);
+
+// Headers
+$h1-h6-font-size: (
+	// --------- h1 ---- h2 ----h3 ---- h4 -- h5 -- h6 ---
+	"default": (3.5rem, 2.8rem, 2.2rem, 2rem, 17px, 16px),
+	"tablet": (25px, 23px, 20px, 18px, 17px, 16px)
+);
+
+$colors: (
+	"black": #000000,
+	"black-medium": #292D32,
+	"grey": #9197B3,
+	"grey-medium": #B5B7C0, 
+	"purple": #5932EA,
+	"green": #16C098,
+	"green-dark": #008767,
+	"red": #DF0404,
+	"pink": #FFC5C5,
+	"white": #ffffff
+);
