@@ -44,7 +44,7 @@ $font-folder-root: "../fonts/";
 
 $base-mixin-font: $ff-inter;
 
-@include ff-mixin($base-mixin-font, $font-folder-root+"Inter-Normal", 400, normal);
+@include ff-mixin($base-mixin-font, $font-folder-root+"Inter-Regular", 400, normal);
 @include ff-mixin($base-mixin-font, $font-folder-root+"Inter-Medium", 500, normal);
 @include ff-mixin($base-mixin-font, $font-folder-root+"Inter-SemiBold", 600, normal);
 @include ff-mixin($base-mixin-font, $font-folder-root+"Inter-Black", 900, normal);
