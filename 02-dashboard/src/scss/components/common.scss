@@ -61,7 +61,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	@include media("<desktop-md") {
-		left: -305pxx;
+		left: -305px;
 		max-width: 375px;
 		width: 100%;
 		padding-right: 70px;
@@ -367,7 +367,7 @@ body {
 .table-responsive {
 	width: 100%;
 	max-width: 100%;
-	@include media("<desktop-md") {
+	@include media("<desktop") {
 		overflow-x: auto;
 	}
 }
@@ -383,6 +383,9 @@ body {
 		font-weight: 500;
 		padding: 20px 30px;
 		white-space: nowrap;
+		@include media("<desktop-md") {
+			padding: 20px 10px;
+		}
 		@include media("<phone") {
 			font-size: 12px;
 			padding: 18px 10px;
@@ -396,6 +399,9 @@ body {
 		}
 		&:nth-child(3) {
 			padding-right: 45px;
+			@include media("<desktop-md") {
+				padding-right: 10px;
+			}
 		}
 		&:nth-child(4) {
 			padding-left: 0;
@@ -424,6 +430,9 @@ body {
 		.table-customers__cell {
 			padding: 0 30px 14px;
 			color: var(--color-grey-medium);
+			@include media("<desktop-md") {
+				padding: 20px 10px;
+			}
 			@include media("<phone") {
 				padding: 0 10px 14px;
 			}
@@ -436,6 +445,9 @@ body {
 			}
 			&:nth-child(3) {
 				padding-right: 45px;
+				@include media("<desktop-md") {
+					padding-right: 10px;
+				}
 			}
 			&:nth-child(4) {
 				padding-left: 0;
