@@ -84,6 +84,17 @@ body {
 	}
 }
 
+.grid {
+	display: grid;
+	&._col-2 {
+		grid-template-columns: 3fr 2fr;
+		gap: 3.2rem;
+		@include media("<desktop") {
+			grid-template-columns: repeat(1,1fr);
+		}
+	}
+}
+
 .text-yellow {
 	color: var(--color-yellow);
 }
@@ -169,6 +180,87 @@ body {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+}
+
+.article {
+	&._with-border {
+		padding: 3.2rem;
+		border: 1px solid rgba(#6D6E76, 0.1)
+	}
+	&__visual {
+		height: 35rem;
+		margin-bottom: 3.2rem;
+		@include media("<phone") {
+			height: 25rem;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: start;
+	}
+	&__label {
+		font-weight: 500;
+		font-size: 14px;
+		color: var(--color-grey-dark);
+	}
+	&__title {
+		margin-bottom: 0;
+		color: var(--color-black);
+	}
+	&__text {
+		color: var(--color-grey-medium);
+	}
+}
+
+.content-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	align-items: baseline;
+	@include media("<phone") {
+		flex-direction: column;
+	}
+}
+
+.post-items {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-item {
+	padding: 2.9rem;
+	display: flex;
+	flex-direction: column;
+	@include media("<desktop") {
+		padding: 2rem 0;
+	}
+	&:hover {
+		background-color: var(--color-yellow-light);
+		@include media("<desktop") {
+			background-color: var(--color-white);
+		}
+	}
+	&__info {
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--color-grey-medium);
+		margin-bottom: 8px;
+	}
+	&__title {
+		margin-bottom: 0;
+		max-width: 36rem;
+		width: 100%;
+		@include media("<desktop") {
+			max-width: 100%;
 		}
 	}
 }
