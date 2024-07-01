@@ -1,10 +1,12 @@
 //= modules/jquery.min.js
 //= modules/jcf.js
+//= modules/swiper.js
 
 jQuery(function() {
 	isWebp();
 	initMenu();
 	initHeaderScroll();
+    initTestimonialSlider();
     // isElementExist("class", function);
 });
 
@@ -78,5 +80,21 @@ function initHeaderScroll() {
         }
 
         lastScroll = scrollPosition();
+    });
+}
+
+function initTestimonialSlider() {
+    const swiper = new Swiper('.swiper', {
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
     });
 }
