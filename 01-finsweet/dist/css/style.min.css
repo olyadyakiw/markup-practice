@@ -10952,6 +10952,65 @@ body {
   margin: 0 auto;
 }
 
+.posts-wrapper {
+  border-top: 1px solid rgba(109, 110, 118, 0.33);
+  padding-top: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.post:hover {
+  opacity: 1;
+}
+.post:hover .post__visual img {
+  transform: scale(1.05);
+}
+.post:hover .post__title {
+  color: var(--color-purple);
+}
+@media (max-width: 767px) {
+  .post {
+    flex-direction: column;
+  }
+}
+.post__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  width: 100%;
+}
+.post__visual {
+  max-width: 49rem;
+  width: 100%;
+  overflow: hidden;
+}
+.post__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+.post__subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-purple);
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 10px 0;
+}
+
 :root {
   --color-black: #232536;
   --color-yellow: #FFD050;
