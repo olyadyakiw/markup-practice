@@ -10537,6 +10537,22 @@ body {
   object-fit: cover;
 }
 
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+@media (max-width: 1023px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .articles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .article._with-border {
   padding: 3.2rem;
   border: 1px solid rgba(109, 110, 118, 0.1);
@@ -10569,6 +10585,9 @@ body {
 .article__title {
   margin-bottom: 0;
   color: var(--color-black);
+}
+.article__title:is(a):hover {
+  color: var(--color-purple);
 }
 .article__text {
   color: var(--color-grey-medium);

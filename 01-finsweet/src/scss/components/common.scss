@@ -289,6 +289,18 @@ body {
 	}
 }
 
+.articles {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3.2rem;
+	@include media("<desktop") {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include media("<tablet") {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
 .article {
 	&._with-border {
 		padding: 3.2rem;
@@ -320,6 +332,11 @@ body {
 	&__title {
 		margin-bottom: 0;
 		color: var(--color-black);
+		&:is(a) {
+			&:hover {
+				color: var(--color-purple);
+			}
+		}
 	}
 	&__text {
 		color: var(--color-grey-medium);
