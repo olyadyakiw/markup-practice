@@ -1,0 +1,105 @@
+@@include('html/head.html',{
+    "title": "Category"
+})
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+
+            <section class="section hero _author _mh-none bg-lavander">
+                <div class="container _md _py-8 _py-lg-13 line-decor-bottom">
+                    <div class="hero__img _md">
+                        <img src="img/author-01.jpg" alt="bg">
+                    </div>
+                    <div class="hero__content">
+                        <h1 class="hero__title text-black h2">
+                            Hey there, I’m Andrew Jonhson and welcome to my Blog
+                        </h1>
+                        <p class="hero__text _mb-3 text-grey-medium">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.
+                        </p>
+                        <ul class="socials _hover-purple">
+                            <li class="social-item">
+                                <a href="#" class="social-item__link">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#facebook" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#twitter" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#instagram" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-item__link">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#linkedin" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section _py-6 _py-lg-13">
+                <div class="container _md">
+                    <h1 class="h2">My Posts</h1>
+                    <ul class="posts-wrapper border-none">
+                        <li>
+                            <a href="#" class="post">
+                                <span class="post__visual">
+                                    <img src="img/post-01.jpg" alt="post">
+                                </span>
+                                <span class="post__content">
+                                    <span class="post__subtitle">Startup</span>
+                                    <span class="post__title h3">Design tips for designers that cover everything you need</span>
+                                    <span class="text">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                        pariatur. Excepteur
+                                        sint
+                                        occaecat cupidatat non proident.
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="post">
+                                <span class="post__visual">
+                                    <img src="img/post-02.jpg" alt="post">
+                                </span>
+                                <span class="post__content">
+                                    <span class="post__subtitle">BUSINESS</span>
+                                    <span class="post__title h3">How to build rapport with your web design clients</span>
+                                    <span class="text">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                        pariatur. Excepteur
+                                        sint
+                                        occaecat cupidatat non proident.
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </main> 
+    </div>
+    
+
+    @@include('html/footer.html',{})
+    @@include('html/includes.html',{})
+</body>
+</html>
