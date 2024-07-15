@@ -1,0 +1,62 @@
+@@include('html/head.html',{
+    "title": "Contact"
+})
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+
+            <section class="section contact-section _py-6 _py-lg-13">
+                <div class="container _sm">
+
+                    <div class="contact">
+
+                        <div class="contact__content">
+                            <p class="subtitle contact__subtitle">Contact us</p>
+                            <h1 class="h2">Let’s Start a Conversation</h1>
+                            <p class="text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim.
+                            </p>
+                        </div>
+
+                        <div class="info">
+                            <div class="info__inner">
+                                <div class="info__col">
+                                    <div class="info__title">Working hours</div>
+                                    <div class="info__content">
+                                        <h5 class="h6">Monday To Friday</h5>
+                                        <h5 class="h6">9:00 AM to 8:00 PM</h5>
+                                        <p class="text">Our Support Team is available 24/7</p>
+                                    </div>
+                                </div>
+                                <div class="info__col">
+                                    <div class="info__title">Contact Us</div>
+                                    <div class="info__content">
+                                        <a href="#" class="h6">020 7993 2905</a>
+                                        <a href="#" class="text">hello@finsweet.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="contact-form">
+                            <input class="contact-form__input" type="text" placeholder="Full Name">
+                            <input type="email" class="contact-form__input" placeholder="Your Email">
+                            <input class="contact-form__input" type="text" placeholder="Query Related">
+                            <textarea class="contact-form__textarea" placeholder="Message"></textarea>
+                            <button type="submit" class="contact-form__button btn btn-yellow">Send Message</button>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+        </main> 
+    </div>
+    
+
+    @@include('html/footer.html',{})
+    @@include('html/includes.html',{})
+</body>
+</html>

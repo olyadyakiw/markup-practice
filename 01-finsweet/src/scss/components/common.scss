@@ -1140,3 +1140,86 @@ body {
 		}
 	}
 }
+
+.contact-section {
+	margin-top: 8rem;
+	@include media("<desktop") {
+		margin-top: 6rem;
+	}
+}
+
+.contact {
+	&__content {
+		text-align: center;
+		margin-bottom: 6.4rem;
+	}
+	&__subtitle {
+		font-weight: 900;
+		margin-bottom: 12px;
+	}
+}
+
+.info {
+	padding: 4.8rem 6.4rem;
+	background-color: var(--color-purple);
+	margin-bottom: 3.2rem;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 4.2rem;
+		@include media("<phone") {
+			flex-direction: column;
+		}
+	}
+	&__col {
+		width: 100%;
+		color: var(--color-white) !important;
+		* {
+			color: var(--color-white) !important;
+		}
+	}
+	&__title {
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		font-weight: 400;
+		color: rgba(#fff, 0.6) !important;
+		border-bottom: 1px solid rgba(#fff, 0.1);
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		* {
+			margin-bottom: 0;
+		}
+		.text {
+			color: rgba(#fff, 0.6) !important;
+		}
+	}
+}
+
+// Forms
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	&__input,
+	&__textarea {
+		border-radius: 2px;
+		border: 1px solid rgba(109, 110, 118, 0.50);
+		padding: 2.4rem;
+		&::placeholder {
+			color: var(--color-black);
+		}
+	}
+	&__textarea {
+		resize: none;
+		height: 15rem;
+	}
+	&__button {
+		font-size: 2.4rem;
+		@include media("<tablet") {
+			font-size: 18px;
+		}
+	}
+}
