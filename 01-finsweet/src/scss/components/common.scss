@@ -1223,3 +1223,19 @@ body {
 		}
 	}
 }
+
+.pages {
+	display: flex;
+	flex-direction: column;
+	li {
+		padding: 15px;
+		border-bottom: 2px solid var(--color-purple);
+	}
+	a {
+		color: var(--color-purple);
+		font-size: 3rem;
+		&:hover {
+			color: var(--color-black);
+		}
+	}
+}
