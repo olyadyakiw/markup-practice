@@ -1,0 +1,51 @@
+@import "components/variables";
+@import "components/fonts";
+@import "vendors/include-media";
+@import "vendors/normalize";
+@import "components/helpers";
+@import "components/typography";
+@import "components/header";
+@import "components/footer";
+@import "components/common";
+
+:root {
+
+	@if $colors {
+		@each $key, $value in $colors {
+			--color-#{$key}: #{$value};
+		}
+	}
+
+	// === Base variable
+
+	// --- HTML style
+	--rem-base: 10px;
+	// --- Body style
+	--base-font-size: 16px;
+	@include media(">=phone") {
+		--base-font-size: 20px;
+	}
+	--base-line-height: 1.42;
+
+	--base-text-color: var(--color-black);
+	--base-link-color: var(--color-black);
+	--h1-h6-color: var(--base-text-color);
+
+	// --- Animation
+	--animation-duration: 0.3s;
+	--animation-timing-function: ease;
+
+	@each $name, $array in $h1-h6-font-size {
+		@if ($name == "default") {
+			@for $i from 1 through length($array) {
+				--h#{$i}: #{nth($array, $i)};
+			}
+		} @else {
+			@include media(">=#{$name}") {
+				@for $i from 1 through length($array) {
+					--h#{$i}: #{nth($array, $i)};
+				}
+			}
+		}
+	}
+}

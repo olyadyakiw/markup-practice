@@ -1,0 +1,39 @@
+// fonts
+$ff-outfit: 'Outfit';
+$ff-raleway: 'Raleway';
+
+$base-main-font: $ff-outfit;
+$base-font-sans-serif: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $ff-raleway; // Heading
+
+// Headers
+$h1-h6-font-size: (
+	// --------- h1 -- h2 -- h3 -- h4 -- h5 -- h6 ---
+	"default": (38px, 30px, 28px, 20px, 18px, 16px),
+	"desktop": (4.8rem, 4rem, 3.4rem, 3rem, 2.4rem, 18px),
+	"xl": (5.8rem, 5.4rem, 4.8rem, 4rem, 2.8rem, 2.4rem),
+);
+
+$colors: (
+	"black": #000000,
+	"white": #ffffff,
+
+	"orange-65": #FF8D4C,
+	"orange-70": #FF9E66,
+	"orange-75": #FFAE80,
+	"orange-80": #FFBE99,
+	"orange-90": #FFDECC,
+	"orange-95": #FFEFE5,
+	"orange-97": #FFF5F0,
+	"orange-99": #FFFCFA,
+
+	"grey-10": #191919,
+	"grey-15": #262626,
+	"grey-20": #333333,
+	"grey-30": #4C4C4D,
+	"grey-35": #59595A,
+	"grey-40": #656567,
+	"grey-60": #98989A,
+	"grey-70": #B3B3B3,
+);
