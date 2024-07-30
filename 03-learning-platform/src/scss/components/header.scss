@@ -1,0 +1,42 @@
+// Top banner
+.top-banner {
+    &__inner {
+        position: relative;
+        z-index: 2;
+        margin-top: 40px;
+        border-radius: 6px;
+        border: 2px solid var(--color-grey-15);
+        background: var(--color-orange-90);
+        padding: 12px 15px;
+        @include media(">=desktop") {
+            margin-top: 16px;
+            padding: 14px 15px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--color-grey-15);
+        font-weight: 500;
+        line-height: 1.5;
+        font-size: 14px;
+        @include media(">=desktop") {
+            gap: 14px;
+            font-size: 16px;
+        }
+        @include media(">=xl") {
+            font-size: 20px;
+        }
+        &:hover {
+            text-decoration: underline;
+            svg {
+                transform: translateX(5px);
+            }
+        }
+        svg {
+            transition: all .4s;
+        }
+    }
+}
