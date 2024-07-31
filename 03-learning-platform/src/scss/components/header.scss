@@ -40,3 +40,225 @@
         }
     }
 }
+
+// Header
+.header {
+    padding: 12px 0;
+    position: relative;
+    transition: all .3s;
+    height: fit-content;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-white);
+        border-radius: 12px;
+        border: 2px solid var(--color-grey-15);
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        gap: 3.2rem;
+        align-items: center;
+        transition: all 0.4s linear;
+        overflow: visible;
+
+        @include media("<desktop") {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 0;
+            flex-direction: column;
+            align-items: start;
+            padding-left: 20px;
+            height: 60vh;
+            background-color: var(--color-grey-light);
+            overflow-y: scroll;
+        }
+
+        @include media("<tablet") {
+            height: 80vh;
+        }
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    padding: 16px 20px;
+    background-color: var(--color-orange-65);
+    border-right: 2px solid var(--color-grey-15);
+    &:hover {
+        background-color: var(--color-orange-80);
+    }
+
+    @include media(">=desktop") {
+        padding: 20px 24px;
+    }
+
+    img,
+    svg {
+        display: inline-block;
+        width: 137px;
+
+        @include media(">=desktop") {
+            width: 15.5rem;
+        }
+        @include media(">=desktop") {
+            width: 18rem;
+        }
+    }
+}
+
+.nav {
+    height: 100%;
+    &__list {
+        display: flex;
+        margin-bottom: 0;
+        height: 100%;
+
+        @include media("<desktop") {
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__item {
+        border-left: 2px solid var(--color-grey-15);
+        &:last-child {
+            .nav__link {
+                background-color: var(--color-orange-75);
+                &:hover {
+                    background-color: var(--color-orange-80);
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: var(--color-grey-15);
+        font-weight: 400;
+        transition: all .4s;
+        position: relative;
+        padding: 5px 0;
+        font-weight: 600;
+        padding: 16px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        @include media("<desktop") {
+            padding: 13px 0;
+            color: var(--color-black);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            border-radius: 5px;
+            background-color: var(--color-black);
+            bottom: 0;
+            left: 0;
+            transition: background-color .4s;
+
+            @include media("<desktop") {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+            background-color: var(--color-orange-95);
+        }
+    }
+}
+
+.nav-opener {
+    display: none;
+    width: 28px;
+    height: 24px;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    @include media("<desktop") {
+        display: block;
+    }
+
+    &:before,
+    &:after,
+    span {
+        background-color: var(--color-white);
+        border-radius: 3px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 4px;
+        margin-top: -1.5px;
+        transition: all 0.2s linear;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        top: 15%;
+    }
+
+    &:after {
+        top: 85%;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.current-menu-item {
+    a {
+        
+
+    }
+}
+
+.nav-active {
+    overflow: hidden;
+
+    .nav-opener {
+        span {
+            opacity: 0;
+        }
+
+        &:before,
+        &:after {
+            transform: rotate(45deg);
+            top: 50%;
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .header__content {
+        @include media("<desktop") {
+            max-height: 1600px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .nav {
+        @include media("<desktop") {
+            transform: translateY(0);
+            width: 100%;
+        }
+    }
+}
