@@ -1,0 +1,32 @@
+// fonts
+$ff-open-sans: 'OpenSans';
+$ff-exo: 'Exo';
+
+$base-main-font: $ff-open-sans;
+$base-font-sans-serif: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $ff-exo; // Heading
+
+// Container
+$gutter: 20px;
+$container: (
+	"default": 1140px,
+);
+
+// Headers
+$h1-h6-font-size: (
+	// --------- h1 -- h2 -- h3 -- h4 -- h5 -- h6 ---
+	"default": (28px, 24px, 18px, 18px, 14px, 12px),
+	"desktop": (4.4rem, 3.2rem, 2.4rem, 20px, 16px, 14px),
+);
+
+// Colors
+$colors: (
+	"black": #313131,
+	"white": #ffffff,
+	"grey": #585858,
+	"violet": #7F3A6A,
+	"violet-medium": #F1E9EE,
+	"violet-light": #F9F1EE,
+	"yellow": #E9A923
+);
