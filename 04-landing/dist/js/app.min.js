@@ -61,11 +61,12 @@ function initInfinityAnimation() {
 		const scrollerContent = Array.from(line.children)
 
 		// Measure the width of a single item
-    	const sampleItem = scrollerContent[0];
-    	const itemWidth = sampleItem.getBoundingClientRect().width + 20;
+    	let sampleItem = scrollerContent[0];
+    	let itemWidth = sampleItem.getBoundingClientRect().width + 20;
 
 		 // Calculate how many items are needed to fill
-    	const itemsNeeded = Math.ceil((targetWidth + 500) / itemWidth);
+    	let itemsNeeded = Math.ceil((targetWidth + 500) / itemWidth);
+		console.log(itemsNeeded)
 
 		// For each item in the array, clone it the required number of times
     	for (let i = 0; i < itemsNeeded; i++) {
@@ -80,23 +81,19 @@ function initInfinityAnimation() {
 		// Get the animation duration from the first item
 		const duration = parseFloat(getComputedStyle(sampleItem).animationDuration) || 30; // Default to 30s if not set
 
-		
+		// Set width
 		const totalWidth = itemWidth * itemsNeeded;
 		line.style.width = `${totalWidth}px`;
-
-		// Set width, delay and left
-		function setValues() {
-			Array.from(items).forEach((item, index) => {
-				const delay = `calc(${duration}s / ${itemsNeeded} * (${itemsNeeded} - ${index}) * -1)`;
-				const left = `calc(${itemWidth}px * ${itemsNeeded})`;
-
-				item.style.setProperty('--width', `${itemWidth}px`)
-				item.style.animationDelay = delay;
-				item.style.left = left;
-			});
-		}
-
-		setValues()
+		line.style.setProperty('--itemWidth', `${itemWidth}px`)
+		
+		// Set delay and left
+		Array.from(items).forEach((item, index) => {
+			const delay = `calc(${duration}s / ${itemsNeeded} * (${itemsNeeded} - ${index}) * -1)`;
+			const left = `calc(${itemWidth}px * ${itemsNeeded})`;
+			
+			item.style.animationDelay = delay;
+			item.style.left = left;
+		});
 
 	})
 }
