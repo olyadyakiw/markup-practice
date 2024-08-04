@@ -66,12 +66,14 @@ h1,
 h2,
 .h2 {
 	font-size: var(--h2);
-	margin: 0 0 0.4em;
+	margin: 0 0 40px;
+	text-transform: capitalize;
 }
 h3,
 .h3 {
 	font-size: var(--h3);
 	margin: 0 0 0.5em;
+	text-transform: capitalize;
 }
 
 h4,
