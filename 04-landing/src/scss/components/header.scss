@@ -21,14 +21,14 @@
         align-items: center;
         gap: 40px;
         position: absolute;
-        height: 100vh;
+        height: calc(100vh + 100px);
         background-color: var(--color-white);
         overflow-y: scroll;
         top: 100%;
         left: 0;
         max-height: 0;
         width: 100%;
-        transform: translateY(-60px);
+        transform: translateY(-150px);
 
         @include media(">=tablet") {
             height: auto;
@@ -156,24 +156,28 @@
         }
     }
 
-    .header__content {
-        padding: 100px 0;
-        transform: translateY(0);
-        max-height: 1000px;
-
-        @include media(">=phone") {
-            padding-top: 40px;
-        }
-
-        @include media(">=tablet") {
-            padding-top: 100px;
-        }
-
-        @include media(">=desktop") {
-            margin-top: 0;
-            padding: 0;
+    .header {
+        
+        &__content {
+            padding: 200px 0 100px;
+            transform: translateY(-100px);
+            max-height: 1000px;
+    
+            @include media(">=phone") {
+                padding-top: 140px;
+            }
+    
+            @include media(">=tablet") {
+                padding-top: 150px;
+            }
+    
+            @include media(">=desktop") {
+                margin-top: 0;
+                padding: 0;
+            }
         }
     }
+
 
     .nav {
         transform: translateY(0);

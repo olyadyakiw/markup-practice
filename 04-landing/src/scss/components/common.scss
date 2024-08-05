@@ -45,6 +45,7 @@ body {
 	min-width: 0;
 }
 
+// Buttons
 .btn {
 	display: inline-block;
 	text-align: center;
@@ -91,16 +92,12 @@ body {
 	}
 }
 
-.link {
-	&:hover {
-		color: var(--color-yellow);
-	}
-}
-
 .main {
 	position: relative;
 }
 
+
+// Body background image
 .body-bg {
 	height: 1000px;
 	@include media(">=tablet") {
@@ -108,6 +105,7 @@ body {
 	}
 }
 
+// Section
 .section {
 	position: relative;
 	z-index: 2;
@@ -121,10 +119,10 @@ body {
 		.title-underline{
 			&:before {
 				width: 100%;
-				transition: width .8s ease-in-out .15s;
+				transition: width .6s ease-in-out .1s;
 			}
-			&:last-child:before {
-				transition: width .8s ease-in-out .8s;
+			&:nth-child(2):before {
+				transition-delay: .6s;
 			}
 		}
 	}
@@ -154,6 +152,7 @@ body {
 	}
 }
 
+// Background
 .bg {
 	position: absolute;
 	z-index: -1;
@@ -173,6 +172,8 @@ body {
 	background-color: var(--color-violet) !important;
 }
 
+
+// Text
 .text {
 	margin-bottom: 0;
 }
@@ -185,6 +186,46 @@ body {
 	color: var(--color-white) !important; 
 }
 
+.link {
+	&:hover {
+		color: var(--color-yellow);
+	}
+}
+
+
+// Title-underline
+.title-underline {
+	display: inline-block;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: var(--color-yellow);
+		width: 0;
+		height: 10px;
+		border-radius: 21px;
+		left: 0;
+		right: 0;
+		bottom: 3px;
+		z-index: -1;
+
+		@include media(">=tablet") {
+			height: 12px;
+			bottom: 8px;
+		}
+	}
+
+	&._md {
+		&:before {
+			@include media(">=tablet") {
+				height: 10px;
+			}
+		}
+	}
+}
+
+// Socials
 .socials {
 	display: flex;
 	gap: 24px;
@@ -206,10 +247,11 @@ body {
 	}
 }
 
+// Hero
 .hero {
 	padding: 100px 0 40px;
 	@include media(">=tablet") {
-		padding: 14rem 0 60px;
+		padding: 14rem 0 35px;
 	}
 	&__inner {
 		display: flex;
@@ -244,34 +286,7 @@ body {
 	}
 }
 
-.title-underline {
-	display: inline-block;
-	position: relative;
-	&:before {
-		content: '';
-		position: absolute;
-		background-color: var(--color-yellow);
-		width: 0;
-		height: 10px;
-		border-radius: 21px;
-		left: 0;
-		right: 0;
-		bottom: 3px;
-		z-index: -1;
-		@include media(">=tablet") {
-			height: 12px;
-			bottom: 8px;
-		}
-	}
-	&._md {
-		&:before {
-			@include media(">=tablet") {
-				height: 10px;
-			}
-		}
-	}
-}
-
+// Infinity lines
 .infinity-lines {
 	display: flex;
 	flex-direction: column;
@@ -340,7 +355,6 @@ body {
 }
 
 // Infinity lines animations
-
 @keyframes scrollRight {
 	from {
 		left: 100%;
@@ -359,6 +373,7 @@ body {
 	}
 }
 
+// CTA
 .cta {
 	@include media(">=tablet") {
 		padding: 6.4rem 0 9.6rem;
@@ -390,6 +405,7 @@ body {
 	}
 }
 
+// Partners logos
 .partners-logos {
 	display: flex;
 	flex-direction: column;
@@ -427,6 +443,7 @@ body {
 	}
 }
 
+// About
 .about {
 	@include media(">=tablet") {
 		padding: 6rem 0;
@@ -436,6 +453,7 @@ body {
 	}
 }
 
+// Text content
 .text-content {
 	&._col-2 {
 		display: flex;
@@ -454,6 +472,7 @@ body {
 	} 
 }
 
+// Services
 .services-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
