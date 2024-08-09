@@ -1,0 +1,106 @@
+.footer {
+    .container {
+        padding-bottom: 20px;
+        @include media(">=desktop") {
+            padding-bottom: 50px;
+        }
+    }
+    &__inner {
+        padding: 60px 30px;
+        border-radius: 12px;
+        border: 2px solid var(--color-grey-15);
+        background: var(--color-white, #FFF);
+        box-shadow: 6px 6px 0px 2px #1E1E1E;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include media(">=desktop") {
+            padding: 80px 80px 40px;
+            gap: 50px;
+        }
+        @include media(">=xl") {
+            padding: 100px 113px 40px;
+            gap: 50px;
+        }
+    }
+    &__logo {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    &__text {
+        margin-bottom: 40px;
+        @include media(">=desktop") {
+            margin-bottom: 50px;
+        }
+    }
+    &__content {
+        max-width: 520px;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include media(">=desktop") {
+            flex-direction: row;
+            gap: 80px;
+        }
+    }
+    &__nav {
+        display: flex;
+        gap: 30px 50px;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include media(">=desktop") {
+            flex-direction: row;
+            gap: 15px;
+            flex-wrap: nowrap;
+        }
+    }
+    &__menu {
+        width: calc(50% - 25px);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        flex-shrink: 1;
+        margin-bottom: 0;
+        &:nth-child(2) {
+            order: 1;
+        }
+        &:nth-child(4) {
+            order: 2;
+        }
+        @include media(">desktop") {
+            max-width: 160px;
+            &:nth-child(2),
+            &:nth-child(4) {
+                order: initial;
+            }
+        }
+        @include media(">=xl") {
+            max-width: 225px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+    }
+    &__item {
+        font-size: 16px;
+        @include media(">=xl") {
+            font-size: 20px;
+        }
+        &:first-child {
+            margin-bottom: 6px;
+            font-weight: 600;
+            @include media(">=xl") {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__link {
+        color: var(--color-grey-20);
+        &:hover {
+            opacity: 1;
+            color: var(--color-orange-65);
+        }
+    }
+}
