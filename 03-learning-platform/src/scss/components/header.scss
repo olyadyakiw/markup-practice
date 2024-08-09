@@ -45,7 +45,6 @@
 .header {
     padding: 12px 0;
     position: relative;
-    transition: all .3s;
     height: fit-content;
     &__inner {
         display: flex;
@@ -59,26 +58,32 @@
     &__content {
         display: flex;
         gap: 3.2rem;
-        align-items: center;
-        transition: all 0.4s linear;
-        overflow: visible;
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        width: calc(100% - 30px);
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: start;
+        max-height: 0;
+        height: auto;
+        overflow-y: scroll;
+        padding: 0;
 
-        @include media("<desktop") {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            max-height: 0;
-            flex-direction: column;
-            align-items: start;
-            padding-left: 20px;
-            height: 60vh;
-            background-color: var(--color-grey-light);
-            overflow-y: scroll;
+        @include media(">=phone") {
+            width: calc(100% - 100px);
+            left: 50px;
         }
 
-        @include media("<tablet") {
-            height: 80vh;
+        @include media(">desktop") {
+            align-items: center;
+            overflow: visible;
+            position: relative;
+            max-height: none;
+            flex-direction: row;
+            width: auto;
+            left: 0;
+            top: auto;
         }
     }
 }
@@ -93,7 +98,7 @@
         background-color: var(--color-orange-80);
     }
 
-    @include media(">=desktop") {
+    @include media(">desktop") {
         padding: 20px 24px;
     }
 
@@ -102,10 +107,10 @@
         display: inline-block;
         width: 137px;
 
-        @include media(">=desktop") {
+        @include media(">desktop") {
             width: 15.5rem;
         }
-        @include media(">=desktop") {
+        @include media(">=xl") {
             width: 18rem;
         }
     }
@@ -115,24 +120,36 @@
     height: 100%;
     &__list {
         display: flex;
+        flex-direction: column;
         margin-bottom: 0;
         height: 100%;
 
-        @include media("<desktop") {
-            flex-direction: column;
-            gap: 30px;
-            padding-top: 40px;
-            padding-bottom: 20px;
+        @include media(">=phone") {
+            max-height: 190px;
+        } 
+        @include media(">=tablet") {
+            max-height: auto;
+        }
+
+        @include media(">desktop") {
+            flex-direction: row;
         }
     }
 
     &__item {
-        border-left: 2px solid var(--color-grey-15);
+        border-bottom: 2px solid var(--color-grey-15);
         &:last-child {
-            .nav__link {
-                background-color: var(--color-orange-75);
-                &:hover {
-                    background-color: var(--color-orange-80);
+            border-bottom: none;
+        }
+        @include media(">desktop") {
+            border-left: 2px solid var(--color-grey-15);
+            border-bottom: none;
+            &:last-child {
+                .nav__link {
+                    background-color: var(--color-orange-75);
+                    &:hover {
+                        background-color: var(--color-orange-80);
+                    }
                 }
             }
         }
@@ -143,17 +160,16 @@
         font-weight: 400;
         transition: all .4s;
         position: relative;
-        padding: 5px 0;
+        padding: 13px 0;
         font-weight: 600;
-        padding: 16px 30px;
+        padding: 10px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
 
-        @include media("<desktop") {
-            padding: 13px 0;
-            color: var(--color-black);
+        @include media(">desktop") {
+            padding: 16px 30px;
         }
 
         &::before {
@@ -164,10 +180,10 @@
             border-radius: 5px;
             background-color: var(--color-black);
             bottom: 0;
-            left: 0;
+            left: 50%;
             transition: background-color .4s;
 
-            @include media("<desktop") {
+            @include media(">desktop") {
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -181,28 +197,30 @@
 }
 
 .nav-opener {
-    display: none;
-    width: 28px;
-    height: 24px;
+    display: block;
+    width: 88px;
+    height: 62px;
+    border: none;
+    border-left: 2px solid var(--color-grey-15);
     position: relative;
     background-color: transparent;
     outline: none;
-    border: none;
+    padding: 16px 30px;
+    background-color: var(--color-orange-95);
 
-    @include media("<desktop") {
-        display: block;
+    @include media(">desktop") {
+        display: none;
     }
 
     &:before,
     &:after,
     span {
-        background-color: var(--color-white);
+        background-color: var(--color-grey-15);
         border-radius: 3px;
         position: absolute;
         top: 50%;
-        left: 0;
-        right: 0;
-        height: 4px;
+        width: 21px;
+        height: 2px;
         margin-top: -1.5px;
         transition: all 0.2s linear;
     }
@@ -210,27 +228,26 @@
     &:before,
     &:after {
         content: "";
-        top: 15%;
+        top: 38%;
     }
 
     &:after {
-        top: 85%;
-    }
-
-    &:hover {
-        opacity: 0.9;
-    }
-}
-
-.current-menu-item {
-    a {
-        
-
+        top: 62%;
+        width: 11px;
+        left: 39.5px;
     }
 }
 
 .nav-active {
     overflow: hidden;
+
+    .header {
+        padding-bottom: 0;
+        &__inner {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
 
     .nav-opener {
         span {
@@ -245,20 +262,22 @@
 
         &:after {
             transform: rotate(-45deg);
+            width: 21px;
+            left: auto;
         }
     }
 
     .header__content {
-        @include media("<desktop") {
-            max-height: 1600px;
-            padding-bottom: 20px;
-        }
+        max-height: 1600px;
+        border: 2px solid var(--color-grey-15);
+        border-top: none;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        transition: max-height .4s ease-in-out;
     }
 
     .nav {
-        @include media("<desktop") {
-            transform: translateY(0);
-            width: 100%;
-        }
+        transform: translateY(0);
+        width: 100%;
     }
 }

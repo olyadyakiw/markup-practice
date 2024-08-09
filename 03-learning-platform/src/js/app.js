@@ -1,7 +1,6 @@
-document.addEventListener('load', () => {
-    isWebp();
-    // isElementExist("class", function);
-})
+isWebp();
+// isElementExist("class", function);
+initMenu()
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);
@@ -35,3 +34,20 @@ function isWebp() {
     })
 }
 
+function initMenu() {
+	const body = document.querySelector('body');
+	const button = document.querySelector('.nav-opener');
+	const content = document.querySelector('.header__content');
+
+	button.addEventListener('click', () => {
+		body.classList.toggle('nav-active');
+		content.classList.toggle('active');
+		button.classList.toggle('active');
+	})
+
+	window.addEventListener('resize', () => {
+		body.classList.remove('nav-active');
+		content.classList.remove('active');
+		button.classList.remove('active');
+	})
+}
