@@ -6,21 +6,20 @@
         }
     }
     &__inner {
-        padding: 60px 30px;
+        padding: 60px 30px 30px;
         border-radius: 12px;
         border: 2px solid var(--color-grey-15);
         background: var(--color-white, #FFF);
         box-shadow: 6px 6px 0px 2px #1E1E1E;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 16px;
         @include media(">=desktop") {
             padding: 80px 80px 40px;
-            gap: 50px;
+            gap: 30px;
         }
         @include media(">=xl") {
             padding: 100px 113px 40px;
-            gap: 50px;
         }
     }
     &__logo {
@@ -43,6 +42,7 @@
         @include media(">=desktop") {
             flex-direction: row;
             gap: 80px;
+            margin-bottom: 20px;
         }
     }
     &__nav {
@@ -51,10 +51,12 @@
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-bottom: 14px;
         @include media(">=desktop") {
             flex-direction: row;
             gap: 15px;
             flex-wrap: nowrap;
+            margin-bottom: 0;
         }
     }
     &__menu {
@@ -101,6 +103,71 @@
         &:hover {
             opacity: 1;
             color: var(--color-orange-65);
+        }
+    }
+    &__bottom {
+        padding: 16px 0;
+        border-top: 1px solid var(--color-grey-15);
+        border-bottom: 1px solid var(--color-grey-15);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include media(">=desktop") {
+            padding: 30px 0;
+            flex-direction: row;
+        }
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    &__links-item {
+        padding: 0 6px;
+        border-left: 1px solid var(--color-grey-15);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        height: 21px;
+        overflow: hidden;
+        &:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+        @include media(">=desktop") {
+            padding: 0 16px;
+            border-width: 2px;
+            height: 28px;
+        }
+    }
+    &__links-link {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 21px;
+        color: var(--color-grey-20);
+        font-weight: 500;
+        &:hover {
+            color: var(--color-orange-65);
+        }
+        @include media(">=desktop") {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    &__copyright {
+        color: var(--color-grey-40);
+        text-align: center;
+        font-size: 14px;
+        @include media(">=tablet") {
+            font-size: 16px;
+        }
+        @include media(">=xl") {
+            font-size: 18px;
         }
     }
 }

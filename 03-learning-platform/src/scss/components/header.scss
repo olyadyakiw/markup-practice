@@ -75,7 +75,7 @@
             left: 50px;
         }
 
-        @include media(">desktop") {
+        @include media(">desktop-md") {
             align-items: center;
             overflow: visible;
             position: relative;
@@ -98,7 +98,7 @@
         background-color: var(--color-orange-80);
     }
 
-    @include media(">desktop") {
+    @include media(">desktop-md") {
         padding: 20px 24px;
     }
 
@@ -107,7 +107,7 @@
         display: inline-block;
         width: 137px;
 
-        @include media(">desktop") {
+        @include media(">desktop-md") {
             width: 15.5rem;
         }
         @include media(">=xl") {
@@ -128,10 +128,10 @@
             max-height: 190px;
         } 
         @include media(">=tablet") {
-            max-height: auto;
+            max-height: none;
         }
 
-        @include media(">desktop") {
+        @include media(">desktop-md") {
             flex-direction: row;
         }
     }
@@ -141,7 +141,7 @@
         &:last-child {
             border-bottom: none;
         }
-        @include media(">desktop") {
+        @include media(">desktop-md") {
             border-left: 2px solid var(--color-grey-15);
             border-bottom: none;
             &:last-child {
@@ -168,7 +168,7 @@
         justify-content: center;
         height: 100%;
 
-        @include media(">desktop") {
+        @include media(">desktop-md") {
             padding: 16px 30px;
         }
 
@@ -183,7 +183,7 @@
             left: 50%;
             transition: background-color .4s;
 
-            @include media(">desktop") {
+            @include media(">desktop-md") {
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -208,7 +208,7 @@
     padding: 16px 30px;
     background-color: var(--color-orange-95);
 
-    @include media(">desktop") {
+    @include media(">desktop-md") {
         display: none;
     }
 
