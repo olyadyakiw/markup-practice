@@ -45,7 +45,8 @@ $font-folder-root: "../fonts/";
 $base-mixin-font: $ff-outfit;
 @include ff-mixin($base-mixin-font, $font-folder-root+"Outfit-Regular", 400, normal);
 @include ff-mixin($base-mixin-font, $font-folder-root+"Outfit-Medium", 500, normal);
-@include ff-mixin($base-mixin-font, $font-folder-root+"Outfit-Semibold", 600, normal);
+@include ff-mixin($base-mixin-font, $font-folder-root+"Outfit-SemiBold", 600, normal);
+@include ff-mixin($base-mixin-font, $font-folder-root+"Outfit-ExtraBold", 800, normal);
 
 $base-accent-font: $ff-raleway;
 @include ff-mixin($base-accent-font, $font-folder-root+"Raleway-Bold", 700, normal);
