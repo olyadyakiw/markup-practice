@@ -156,13 +156,66 @@ body {
 	}
 }
 
-.hero {
-	margin: 35px 0 80px;
-	@include media(">desktop") {
-		margin: 40px 0 160px;
+.section {
+	padding-top: 80px;
+	@include media(">=desktop") {
+		padding-top: 160px;
 	}
 	@include media(">=xl") {
-		margin: 70px 0 200px;
+		padding-top: 200px;
+	}
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 990px;
+		width: 100%;
+		margin: 0 auto 80px;
+		@include media(">=desktop") {
+			margin-bottom: 120px;
+		}
+	}
+	&__tag {
+		border-radius: 8px;
+		border: 2px solid #000;
+		background: var(--color-white, #FFF);
+		padding: 8px 14px;
+		color: var(--color-grey-20);
+		font-family: $ff-outfit;
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 10px;
+		@include media(">=xl") {
+			padding: 10px 20px;
+			font-size: 18px;
+			margin-bottom: 19px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		margin-bottom: 0;
+		@include media(">=xl") {
+			font-size: 20px;
+		}
+	}
+}
+
+.box {
+	border-radius: 12px;
+	border: 2px solid var(--color-grey-15);
+	background-color: var(--color-white);
+	box-shadow: 6px 6px 0px 2px #1E1E1E;
+}
+
+.hero {
+	padding-top: 0;
+	margin-top: 35px;
+	@include media(">desktop") {
+		margin-top: 40px;
+	}
+	@include media(">=xl") {
+		margin-top: 70px;
 	}
 	&__inner {
 		display: flex;
@@ -365,6 +418,67 @@ body {
 		font-size: 16px;
 		@include media(">=xl") {
 			font-size: 18px;
+		}
+	}
+}
+
+.benefits {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 60px;
+	@include media(">phone") {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 60px 40px;
+	}
+	@include media(">desktop") {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include media(">=xl") {
+		gap: 85px 40px;
+	}
+}
+
+.benefit {
+	padding: 50px 30px 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	position: relative;
+	@include media(">=desktop") {
+		padding: 60px 40px 40px;
+	}
+	@include media(">=xl") {
+		padding: 80px 50px 50px;
+	}
+	&__icon {
+		position: absolute;
+		top: 0;
+		transform: translateY(-50%);
+		padding: 16px;
+		border-radius: 12px;
+		border: 2px solid var(--color-grey-15);
+		background: var(--color-orange-90);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			fill: var(--color-grey-15);
+			width: 24px;
+			height: 24px;
+			@include media(">=xl") {
+				width: 34px;
+				height: 34px;
+			}
+		}
+		@include media(">=xl") {
+			padding: 20px;
+		}
+	}
+	&__text {
+		margin-bottom: 0;
+		font-size: 16px;
+		@include media(">=xl") {
+			font-size: 20px;
 		}
 	}
 }
