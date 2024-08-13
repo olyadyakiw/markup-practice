@@ -158,7 +158,7 @@ body {
 
 .section {
 	padding-top: 80px;
-	@include media(">=desktop") {
+	@include media(">desktop") {
 		padding-top: 160px;
 	}
 	@include media(">=xl") {
@@ -172,7 +172,7 @@ body {
 		max-width: 990px;
 		width: 100%;
 		margin: 0 auto 80px;
-		@include media(">=desktop") {
+		@include media(">desktop") {
 			margin-bottom: 120px;
 		}
 	}
@@ -480,5 +480,166 @@ body {
 		@include media(">=xl") {
 			font-size: 20px;
 		}
+	}
+}
+
+.testimonials {
+	position: relative;
+	padding-bottom: 90px;
+	@include media(">desktop") {
+		padding-bottom: 0;
+	}
+}
+
+.testimonial {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	@include media(">=desktop") {
+		padding: 40px;
+	}
+	@include media(">=xl") {
+		padding: 50px 60px;
+	}
+	&__avatar {
+		border-radius: 50%;
+		border: 1px solid var(--color-grey-20);
+		background: var(--color-orange-97);
+		margin-bottom: 10px;
+		width: 66px;
+		height: 66px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media(">=xl") {
+			width: 80px;
+			height: 80px;
+			padding: 14px;
+			margin-bottom: 12px;
+		}
+		img {
+			width: 50px;
+			height: 50px;
+			object-fit: contain;
+			@include media(">=xl") {
+				width: 56px;
+				height: 56px;
+			}
+		}
+	}
+	&__name {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.5;
+		color: var(--color-grey-20);
+		margin-bottom: 20px;
+		@include media(">=desktop") {
+			margin-bottom: 24px;
+			font-size: 24px;
+		}
+		@include media(">=xl") {
+			margin-bottom: 30px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		text-align: center;
+		font-weight: 500;
+		color: var(--color-grey-20);
+		margin-bottom: 0;
+		@include media(">=xl") {
+			font-size: 20px;
+		}
+	}
+}
+
+.rating {
+	display: flex;
+	gap: 5px;
+	margin-bottom: 20px;
+	@include media(">=desktop") {
+		margin-bottom: 24px;
+		gap: 4px;
+	}
+	@include media(">=xl") {
+		margin-bottom: 30px;
+	}
+	&__item {
+		svg {
+			fill: var(--color-orange-65);
+			width: 24px;
+			height: 24px;
+			@include media(">=desktop") {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+
+// Swiper
+
+.swiper {
+	@include media(">desktop") {
+		max-width: calc(100% - 160px);
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	border-radius: 8px;
+	border: 2px solid var(--color-grey-20);
+	background: var(--color-white);
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	top: auto;
+	left: calc(50% + 15px);
+
+	@include media(">desktop") {
+		right: 0;
+		left: auto;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	@include media(">=xl") {
+		width: 58px;
+		height: 58px;
+	}
+
+	&::after {
+		display: none;
+	}
+	svg {
+		flex-shrink: 0;
+		width: 30px;
+		height: 30px;
+		fill: var(--color-grey-20);
+		@include media(">=desktop") {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+.swiper-button-prev {
+	transform: rotate(180deg);
+	bottom: 0;
+	top: auto;
+	right: calc(50% + 15px);
+	left: auto;
+	@include media(">desktop") {
+		left: 0;
+		right: auto;
+		top: 50%;
+		transform: translateY(-50%) rotate(180deg);
 	}
 }

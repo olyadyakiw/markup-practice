@@ -1,6 +1,9 @@
+//= modules/swiper-bundle.js
+
 isWebp();
 // isElementExist("class", function);
 initMenu()
+initSlider()
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);
@@ -49,5 +52,30 @@ function initMenu() {
 		body.classList.remove('nav-active');
 		content.classList.remove('active');
 		button.classList.remove('active');
+	})
+}
+
+function initSlider() {
+	const swiper = new Swiper('.swiper', {
+		loop: true,
+		spaceBetween: 50,
+		slidesPerView: 3,
+		autoHeight: true,
+
+		// Navigation arrows
+  		navigation: {
+  		  nextEl: '.swiper-button-next',
+  		  prevEl: '.swiper-button-prev',
+  		},
+
+		// Responsive breakpoints
+  		breakpoints: {
+  		  	1400: {
+  		    	spaceBetween: 40,
+		  	},
+  		  	320: {
+  		    	slidesPerView: 1,
+		  	},
+  		},
 	})
 }
