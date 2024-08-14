@@ -10581,14 +10581,17 @@ body {
 .section {
   padding-top: 80px;
 }
+.section:last-child {
+  padding-bottom: 150px;
+}
 @media (min-width: 1025px) {
   .section {
-    padding-top: 160px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 1680px) {
   .section {
-    padding-top: 200px;
+    padding-top: 150px;
   }
 }
 .section__header {
@@ -11153,6 +11156,215 @@ body {
     right: auto;
     top: 50%;
     transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 50px;
+}
+@media (min-width: 1025px) {
+  .faq-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq {
+  border-radius: 12px;
+  border: 2px solid var(--color-grey-15);
+  background: var(--color-orange-95);
+  cursor: pointer;
+  position: relative;
+  min-height: 0;
+  padding: 30px 24px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1680px) {
+  .faq {
+    padding: 40px;
+    margin-bottom: 30px;
+  }
+}
+.faq.active {
+  background-color: var(--color-white);
+}
+.faq.active .faq__text {
+  overflow: visible;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 2px solid var(--color-grey-15);
+  opacity: 1;
+  transition: max-height 0.6s, opacity 0.2s 0.1s, padding 0.4s, margin-top 0.4s;
+}
+@media (min-width: 1680px) {
+  .faq.active .faq__text {
+    padding-top: 24px;
+    margin-top: 24px;
+  }
+}
+.faq.active .faq__button:before {
+  content: "-";
+  transform: translateY(-2px);
+}
+.faq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 1680px) {
+  .faq__header {
+    gap: 30px;
+  }
+}
+.faq__button {
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 2px solid var(--color-grey-15);
+  background: var(--color-orange-97);
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 40px;
+  top: 34px;
+}
+@media (min-width: 1680px) {
+  .faq__button {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+.faq__button::before {
+  content: "+";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq__title {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--color-grey-15);
+  padding: 0;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+@media (min-width: 1680px) {
+  .faq__title {
+    font-size: 22px;
+  }
+}
+.faq__text {
+  margin-bottom: 0;
+  max-width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: var(--color-grey-20);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: max-height 0.6s, opacity 0.2s 0.1s, padding 0.4s, margin-top 0.4s;
+}
+@media (min-width: 769px) {
+  .faq__text {
+    max-width: calc(100% - 100px);
+  }
+}
+
+.cards-grid {
+  display: grid;
+}
+.cards-grid._col-2 {
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+@media (min-width: 1024px) {
+  .cards-grid._col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  text-align: center;
+  padding: 40px;
+}
+@media (min-width: 1024px) {
+  .card {
+    padding: 60px;
+  }
+}
+@media (min-width: 1680px) {
+  .card {
+    padding: 70px;
+  }
+}
+.card__btn {
+  border-radius: 10px;
+  border: 2px solid var(--color-grey-15);
+  background: var(--color-orange-90);
+  box-shadow: 4px 4px 0px 2px #1E1E1E;
+  padding: 18px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.4s;
+  font-size: 16px;
+}
+@media (min-width: 1025px) {
+  .card__btn {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1680px) {
+  .card__btn {
+    font-size: 20px;
+  }
+}
+.card__btn:hover {
+  background: var(--color-orange-65);
+}
+.card__decor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (min-width: 1025px) {
+  .card__decor {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1680px) {
+  .card__decor {
+    margin-bottom: 50px;
+  }
+}
+.card__text {
+  min-height: 120px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  .card__text {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1680px) {
+  .card__text {
+    margin-bottom: 80px;
+    font-size: 20px;
   }
 }
 
