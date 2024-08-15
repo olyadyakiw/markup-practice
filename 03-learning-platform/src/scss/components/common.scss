@@ -35,7 +35,7 @@ body {
 .wrapper {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	min-height: 100%;
+	// min-height: 100%;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
@@ -178,6 +178,41 @@ body {
 		@include media(">desktop") {
 			margin-bottom: 120px;
 		}
+		&._row {
+			flex-direction: column;
+			text-align: center;
+			max-width: 100%;
+			padding: 50px 30px;
+			margin: 0;
+			text-align: center;
+			gap: 20px;
+			@include media(">desktop") {
+				text-align: left;
+				flex-direction: row;
+				padding: 100px 80px;
+			}
+			@include media(">=xl") {
+				padding: 120px 150px;
+				gap: 50px;
+			}
+		}
+	}
+	&__title {
+		max-width: 535px;
+		width: 100%;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		* {
+			margin-bottom: 0;
+		}
+		@include media(">desktop") {
+			align-items: start;
+		}
+		@include media(">=xl") {
+			max-width: 765px;
+		}
 	}
 	&__tag {
 		border-radius: 8px;
@@ -198,6 +233,7 @@ body {
 	&__text {
 		font-size: 16px;
 		margin-bottom: 0;
+		font-weight: 500;
 		@include media(">=xl") {
 			font-size: 20px;
 		}
@@ -823,6 +859,40 @@ body {
 		@include media(">=xl") {
 			margin-bottom: 80px;
 			font-size: 20px;
+		}
+	}
+}
+
+.hero-inner {
+	padding-top: 0;
+	margin-top: 35px;
+
+	@include media(">desktop") {
+		margin-top: 40px;
+	}
+
+	@include media(">=xl") {
+		margin-top: 70px;
+	}
+	&__box {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			background-image: url('../img/hero-inner-decor.svg');
+			width: 100px;
+			height: 100px;
+			background-size: cover;
+			top: 0;
+			left: 0;
+			@include media(">=desktop") {
+				width: 137px;
+				height: 137px;
+			}
+			@include media(">=xl") {
+				width: 200px;
+				height: 200px;
+			}
 		}
 	}
 }
