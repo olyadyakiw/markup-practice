@@ -10503,8 +10503,24 @@ body {
   background-color: var(--color-orange-97);
 }
 
+.text {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--color-grey-20);
+}
+@media (min-width: 1680px) {
+  .text {
+    font-size: 20px;
+  }
+}
+
 .text-orange-65 {
   color: var(--color-orange-65) !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 
 .bg {
@@ -11451,6 +11467,49 @@ body {
   }
 }
 
+.card-with-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+@media (min-width: 1024px) {
+  .card-with-icon {
+    padding: 50px;
+    gap: 50px;
+  }
+}
+@media (min-width: 1680px) {
+  .card-with-icon {
+    padding: 60px;
+    gap: 60px;
+  }
+}
+.card-with-icon__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-with-icon__title {
+  margin-bottom: 0;
+  color: var(--color-grey-10);
+}
+.card-with-icon__visual {
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 1024px) {
+  .card-with-icon__visual {
+    width: 80px;
+    height: 80px;
+  }
+}
+.card-with-icon__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
@@ -11462,7 +11521,7 @@ body {
   --color-orange-95: #FFEFE5;
   --color-orange-97: #FFF5F0;
   --color-orange-99: #FFFCFA;
-  --color-grey-10: #191919;
+  --color-grey-10: #1A1A1A;
   --color-grey-15: #262626;
   --color-grey-20: #333333;
   --color-grey-30: #4C4C4D;
