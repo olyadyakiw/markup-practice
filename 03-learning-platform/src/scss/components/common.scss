@@ -519,14 +519,6 @@ body {
 .benefits-swiper {
 	padding-right: 10px;
 	overflow: hidden;
-	.benefit {
-		@include media(">=desktop") {
-			min-height: 277px;
-		}
-		@include media(">=xl") {
-			min-height: 303px;
-		}
-	}
 	.swiper-slide {
 		padding-top: 30px;
 		padding-bottom: 10px;
@@ -558,6 +550,7 @@ body {
 	flex-direction: column;
 	align-items: start;
 	position: relative;
+	height: -webkit-fill-available;
 	@include media(">=desktop") {
 		padding: 60px 40px 40px;
 	}
@@ -606,6 +599,7 @@ body {
 }
 
 .testimonial {
+	height: -webkit-fill-available;
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
@@ -702,6 +696,10 @@ body {
 		width: 100%;
 		margin: 0 auto;
 	}
+}
+
+.swiper-slide {
+	align-self: stretch;
 }
 
 .swiper-button-prev,
@@ -1010,6 +1008,155 @@ body {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
+		}
+	}
+}
+
+.history {
+	padding: 50px 20px;
+	@include media(">desktop") {
+		padding: 100px;
+	}
+	@include media(">=xl") {
+		padding: 150px;
+	}
+	&__inner {
+		padding-left: 51px;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		position: relative;
+		@include media(">desktop") {
+			padding-left: 73px;
+			gap: 40px;
+		}
+		@include media(">=xl") {
+			padding-left: 84px;
+			gap: 50px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 4px;
+			width: 12px;
+			background-color: var(--color-black);
+			border: 5px solid var(--color-orange-80);
+			top: 40px;
+			height: calc(100% - var(--lastItemHeight));
+			
+			@include media(">desktop") {
+				height: calc(100% - 120px);
+				top: 55px;
+			}
+			@include media(">=xl") {
+				height: calc(100% - 150px);
+				top: 75px;
+			}
+		}
+	}
+}
+
+.history-item {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	flex-direction: column;
+	align-items: start;
+	gap: 30px;
+	@include media(">desktop") {
+		flex-direction: row;
+		gap: 50px;
+	}
+ 	&:after {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: var(--color-white);
+		border-radius: 50%;
+		border: 2px solid var(--color-grey-15);
+		transform: translate(-50%, -50%);
+		top: 49px;
+		left: -40px;
+		@include media(">desktop") {
+			left: -63px;
+			top: 61px;
+		}
+		@include media(">=xl") {
+			left: -75px;
+			top: 50%;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		height: 12px;
+		background-color: var(--color-black);
+		width: 100%;
+		border: 5px solid var(--color-orange-80);
+		border-right-width: 8px;
+		transform: translateY(-50%);
+		top: 48px;
+		left: -40px;
+		max-width: 40px;
+		@include media(">desktop") {
+			max-width: 60px;
+			left: -60px;
+			top: 50%;
+			transform: translateY(-100%);
+			
+		}
+		@include media(">=xl") {
+			max-width: 80px;
+			left: -70px;
+			transform: translateY(-50%);
+		}
+	}
+	&__year {
+		padding: 20px 24px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		position: relative;
+		@include media(">desktop") {
+			padding: 24px 34px;
+		}
+		@include media(">=xl") {
+			padding: 30px 50px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background-color: var(--color-white);
+			border-radius: 50%;
+			border: 2px solid var(--color-grey-15);
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 0;
+		}
+	}
+	&__decor {
+		flex-shrink: 0;
+		width: 50px;
+		height: 50px;
+		@include media(">desktop") {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	&__num {
+		color: var(--color-grey-10);
+		margin-bottom: 0;
+		font-size: 38px;
+		font-weight: 700;
+		font-family: $ff-raleway;
+		@include media(">desktop") {
+			font-size: 48px;
+		}
+		@include media(">=xl") {
+			font-size: 6.8rem;
 		}
 	}
 }

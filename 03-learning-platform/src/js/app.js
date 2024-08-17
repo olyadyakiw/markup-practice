@@ -1,12 +1,12 @@
 //= modules/swiper-bundle.js
 
 isWebp();
-// isElementExist("class", function);
 initMenu()
 initSlider()
 initBenefitsSlider()
-initAccordionColumns()
+isElementExist(".faq", initAccordionColumns);
 initAccordion()
+initHistoryItemHeight()
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);
@@ -62,7 +62,7 @@ function initSlider() {
 	const swiper = new Swiper('.swiper', {
 		loop: true,
 		spaceBetween: 50,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		autoHeight: true,
 
 		// Navigation arrows
@@ -73,12 +73,13 @@ function initSlider() {
 
 		// Responsive breakpoints
   		breakpoints: {
-  		  	1400: {
+  		  	1024: {
   		    	spaceBetween: 40,
+				slidesPerView: 2,
 		  	},
-  		  	320: {
-  		    	slidesPerView: 1,
-		  	},
+  		  	1400: {
+				slidesPerView: 3,
+		  	}
   		},
 	})
 }
@@ -87,7 +88,7 @@ function initBenefitsSlider() {
 	const swiper = new Swiper('.benefits-swiper', {
 		loop: true,
 		spaceBetween: 50,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		autoHeight: true,
 
 		// Navigation arrows
@@ -98,12 +99,14 @@ function initBenefitsSlider() {
 
 		// Responsive breakpoints
   		breakpoints: {
+  		  	1024: {
+  		    	spaceBetween: 40,
+				slidesPerView: 2,
+		  	},
   		  	1400: {
   		    	spaceBetween: 40,
-		  	},
-  		  	320: {
-  		    	slidesPerView: 1,
-		  	},
+				slidesPerView: 3,
+		  	}
   		},
 	})
 }
@@ -160,4 +163,15 @@ function initAccordion() {
             item.classList.add('active');
         }
     };
+}
+
+function initHistoryItemHeight() {
+	const item = document.querySelector('.history-item:last-child')
+	const inner = document.querySelector('.history__inner')
+	let height = item.clientHeight
+	inner.style.setProperty('--lastItemHeight', `${height}px`)
+	window.addEventListener('resize', () => {
+		height = item.clientHeight
+		inner.style.setProperty('--lastItemHeight', `${height}px`)
+	})
 }
