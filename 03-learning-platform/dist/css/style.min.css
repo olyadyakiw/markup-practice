@@ -11762,6 +11762,115 @@ body {
   }
 }
 
+.team-member {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .team-member {
+    padding: 40px;
+  }
+}
+@media (min-width: 1680px) {
+  .team-member {
+    gap: 30px;
+    padding: 50px;
+  }
+}
+.team-member__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .team-member__header {
+    gap: 16px;
+  }
+}
+@media (min-width: 1680px) {
+  .team-member__header {
+    gap: 20px;
+  }
+}
+.team-member__avatar {
+  border-radius: 12px;
+  border: 2px solid var(--color-grey-15);
+  background-color: var(--color-orange-97);
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  .team-member__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 1680px) {
+  .team-member__avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+.team-member__name {
+  margin-bottom: 0;
+  color: var(--color-grey-20);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.5;
+  width: 100%;
+  font-size: 20px;
+}
+@media (min-width: 1024px) {
+  .team-member__name {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1680px) {
+  .team-member__name {
+    font-size: 30px;
+  }
+}
+.team-member__contact {
+  border-radius: 8px;
+  border: 2px solid var(--color-grey-15);
+  background: var(--color-orange-90);
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.team-member__contact:hover {
+  background-color: var(--color-orange-65);
+}
+@media (min-width: 1024px) {
+  .team-member__contact {
+    width: 56px;
+    height: 56px;
+  }
+}
+.team-member__info {
+  border-radius: 12px;
+  border: 2px solid var(--color-grey-15);
+  background-color: var(--color-orange-97);
+  padding: 20px;
+}
+@media (min-width: 1024px) {
+  .team-member__info {
+    padding: 24px;
+  }
+}
+@media (min-width: 1680px) {
+  .team-member__info {
+    padding: 30px;
+  }
+}
+
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
