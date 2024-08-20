@@ -1333,9 +1333,14 @@ body {
 	overflow-x: scroll;
 	margin: 0 auto;
 	display: flex;
+	margin-bottom: 50px;
+	@include media(">=desktop") {
+		margin-bottom: 9rem;
+	}
 	@include media(">=xl") {
 		max-width: 1000px;
 		gap: 15px;
+		margin-bottom: 12rem;
 	}
 }
 
@@ -1352,13 +1357,123 @@ body {
 		background: var(--color-white);
 		cursor: pointer;
 		transition: background-color .4s;
-		&:hover {
+		&:hover,
+		&.active {
 			background-color: var(--color-orange-95);
 		}
 		@include media(">=xl") {
 			font-size: 20px;
 			padding: 14px 20px;
 			border-radius: 8px;
+		}
+	}
+}
+
+.gallery-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	@include media(">=desktop"){
+		gap: 12rem;
+	}
+	@include media(">=xl"){
+		gap: 15rem;
+	}
+}
+
+.gallery {
+	padding: 0 30px 30px;
+	margin-top: 100px;
+
+	@include media(">=desktop") {
+		padding: 0 40px 40px;
+		margin-top: 120px;
+	}
+	@include media(">=xl") {
+		padding: 0 50px 50px;
+		margin-top: 152px;
+	}
+	&__header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 30px;
+		flex-direction: column-reverse;
+		gap: 30px;
+		@include media(">=desktop") {
+			flex-direction: row;
+			padding-top: 40px;
+		}
+		@include media(">=xl") {
+			padding-top: 50px;
+		}
+	}
+	&__title {
+		margin-bottom: 0;
+	}
+	&__text {
+		font-size: 18px;
+		margin-bottom: 0;
+		text-align: center;
+		@include media(">=desktop") {
+			font-size: 20px;
+			text-align: left;
+		}
+		@include media(">=xl") {
+			font-size: 22px;
+		}
+	}
+	&__btns {
+		position: relative;
+		display: flex;
+		gap: 20px;
+		.swiper-button-next,
+		.swiper-button-prev {
+			position: static;
+			transform: translateY(25%);
+		}
+		.swiper-button-prev {
+			transform: translateY(25%) rotate(180deg);
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@include media(">=desktop") {
+			gap: 30px;
+		}
+		@include media(">=xl") {
+			gap: 40px;
+		}
+	}
+}
+
+.gallery-slider {
+	overflow: hidden;
+	margin-top: -100px;
+	@include media(">=desktop") {
+		margin-top: -11.5rem;
+	}
+	@include media(">=xl") {
+		margin-top: -15rem;
+	}
+	&__item {
+		border: 2px solid var(--color-grey-15);
+		border-radius: 10px;
+		overflow: hidden;
+		height: 200px;
+		@include media(">=desktop") {
+			height: 23rem;
+		}
+		@include media(">=xl") {
+			border-radius: 12px;
+			height: 30rem;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }

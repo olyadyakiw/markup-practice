@@ -6,7 +6,9 @@ initSlider()
 initBenefitsSlider()
 isElementExist(".faq", initAccordionColumns);
 initAccordion()
-initHistoryItemHeight()
+isElementExist('.history', initHistoryItemHeight)
+isElementExist('.gallery', initGallerySlider)
+isElementExist('.gallery', initGalleryFilters)
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);
@@ -174,4 +176,88 @@ function initHistoryItemHeight() {
 		height = item.clientHeight
 		inner.style.setProperty('--lastItemHeight', `${height}px`)
 	})
+}
+
+function initGallerySlider() {
+	const items = document.querySelectorAll('.gallery')
+	items.forEach((item, index) => {
+		
+		const slider = item.querySelector('.gallery-slider');
+
+		slider.classList.add(`gallery-slider-${index}`);
+
+		const nextButton = item.querySelector('.swiper-button-next');
+		const prevButton = item.querySelector('.swiper-button-prev');
+		
+		if (nextButton && prevButton) {
+			nextButton.classList.add(`swiper-button-next${index}`);
+			prevButton.classList.add(`swiper-button-prev${index}`);
+		}
+
+		const swiper = new Swiper(slider, {
+			loop: true,
+			spaceBetween: 40,
+			slidesPerView: 1,
+			autoHeight: true,
+	
+			navigation: {
+				nextEl: `.swiper-button-next${index}`,
+				prevEl: `.swiper-button-prev${index}`,
+			},
+	
+			breakpoints: {
+				1024: {
+					spaceBetween: 40,
+					slidesPerView: 3,
+				},
+				1400: {
+					slidesPerView: 4,
+				}
+			},
+		});
+	});
+}
+
+function initGalleryFilters() {
+	const filterButtons = document.querySelectorAll('.filter__btn');
+    const galleryItems = document.querySelectorAll('.gallery');
+
+    let activeFilters = new Set();
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const filter = button.getAttribute('data-filter');
+
+            if (filter === 'all') {
+                activeFilters.clear();
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                showItems();
+            } else {
+                button.classList.toggle('active');
+                if (activeFilters.has(filter)) {
+                    activeFilters.delete(filter);
+                } else {
+                    activeFilters.add(filter);
+                    document.querySelector('.filter__btn[data-filter="all"]').classList.remove('active');
+                }
+                showItems();
+            }
+        });
+    });
+
+    function showItems() {
+        if (activeFilters.size === 0) {
+            galleryItems.forEach(item => item.style.display = '');
+        } else {
+            galleryItems.forEach(item => {
+                const itemCategory = item.querySelector('.gallery__title').textContent.trim();
+                if (activeFilters.has(itemCategory)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    }
 }

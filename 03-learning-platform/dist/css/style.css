@@ -11974,11 +11974,18 @@ body {
   overflow-x: scroll;
   margin: 0 auto;
   display: flex;
+  margin-bottom: 50px;
+}
+@media (min-width: 1024px) {
+  .gallery-filters {
+    margin-bottom: 9rem;
+  }
 }
 @media (min-width: 1680px) {
   .gallery-filters {
     max-width: 1000px;
     gap: 15px;
+    margin-bottom: 12rem;
   }
 }
 
@@ -11997,7 +12004,7 @@ body {
   cursor: pointer;
   transition: background-color 0.4s;
 }
-.filter__btn:hover {
+.filter__btn:hover, .filter__btn.active {
   background-color: var(--color-orange-95);
 }
 @media (min-width: 1680px) {
@@ -12006,6 +12013,142 @@ body {
     padding: 14px 20px;
     border-radius: 8px;
   }
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+@media (min-width: 1024px) {
+  .gallery-grid {
+    gap: 12rem;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery-grid {
+    gap: 15rem;
+  }
+}
+
+.gallery {
+  padding: 0 30px 30px;
+  margin-top: 100px;
+}
+@media (min-width: 1024px) {
+  .gallery {
+    padding: 0 40px 40px;
+    margin-top: 120px;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery {
+    padding: 0 50px 50px;
+    margin-top: 152px;
+  }
+}
+.gallery__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+@media (min-width: 1024px) {
+  .gallery__header {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery__header {
+    padding-top: 50px;
+  }
+}
+.gallery__title {
+  margin-bottom: 0;
+}
+.gallery__text {
+  font-size: 18px;
+  margin-bottom: 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .gallery__text {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery__text {
+    font-size: 22px;
+  }
+}
+.gallery__btns {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.gallery__btns .swiper-button-next,
+.gallery__btns .swiper-button-prev {
+  position: static;
+  transform: translateY(25%);
+}
+.gallery__btns .swiper-button-prev {
+  transform: translateY(25%) rotate(180deg);
+}
+.gallery__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .gallery__content {
+    gap: 30px;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery__content {
+    gap: 40px;
+  }
+}
+
+.gallery-slider {
+  overflow: hidden;
+  margin-top: -100px;
+}
+@media (min-width: 1024px) {
+  .gallery-slider {
+    margin-top: -11.5rem;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery-slider {
+    margin-top: -15rem;
+  }
+}
+.gallery-slider__item {
+  border: 2px solid var(--color-grey-15);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+}
+@media (min-width: 1024px) {
+  .gallery-slider__item {
+    height: 23rem;
+  }
+}
+@media (min-width: 1680px) {
+  .gallery-slider__item {
+    border-radius: 12px;
+    height: 30rem;
+  }
+}
+.gallery-slider__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 :root {
