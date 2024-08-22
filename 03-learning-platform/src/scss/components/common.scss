@@ -1559,3 +1559,141 @@ body {
 		margin-bottom: 0;
 	}
 }
+
+.fee-table {
+	padding: 30px;
+	margin-bottom: 40px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include media(">desktop") {
+		padding: 5rem;
+		margin-bottom: 6rem;
+	}
+	@include media(">=xl") {
+		padding: 6rem;
+		margin-bottom: 8rem;
+	}
+	&__inner {
+		padding-bottom: 20px;
+		overflow-x: scroll;
+		
+		&::-webkit-scrollbar {
+			width: 8px;
+			transform: translateY(-20px);
+		}
+	
+		&::-webkit-scrollbar-track {
+			background-color: var(--color-grey-15);
+			border-radius: 40px;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--color-orange-65);
+			border-radius: 40px;
+		}
+		@include media(">desktop") {
+			overflow: hidden;
+		}
+	}
+}
+
+.table {
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0;
+	width: 100%;
+	overflow-x: auto;
+	&._col-2 {
+		.table__cell {
+			width: 50%;
+			min-width: 350px;
+			@include media(">=desktop") {
+				min-width: 55rem;
+			}
+		}
+		.table__head {
+			.table__cell {
+				font-size: 24px;
+				font-weight: 700;
+				font-family: $ff-raleway;
+				@include media("<=xl") {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	&__head {
+		.table__cell {
+			background-color: var(--color-orange-95);
+			border-right: none !important;
+			padding: 18px 30px;
+			
+			@include media(">=xl") {
+				padding: 20px 34px;
+			}
+			&:first-child {
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+			}
+			&:last-child {
+				border-top-right-radius: 10px;
+				border-bottom-right-radius: 10px;
+				border-right: 2px solid var(--color-grey-15) !important;
+			}
+			
+		}
+	}
+	
+	&__cell {
+		border: 2px solid var(--color-grey-15);
+		color: var(--color-grey-15);
+		font-family: $ff-outfit;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 150%;
+		padding: 24px 30px;
+		min-width: 230px;
+		border-right: none;
+		border-bottom: none;
+		&:last-child {
+			border-right: 2px solid var(--color-grey-15);
+		}
+		@include media(">=xl") {
+			padding: 30px 30px;
+			font-size: 20px;
+			min-width: 300px;
+		}
+	}
+
+	&__body {
+		.table__row:first-child {
+			height: 30px;
+		}
+		.table__row:nth-child(2) {
+			.table__cell:first-child {
+				border-top-left-radius: 10px;
+			}
+			.table__cell:last-child {
+				border-top-right-radius: 10px;
+			}
+		}
+		.table__row:last-child {
+			.table__cell:first-child {
+				border-bottom-left-radius: 10px;
+			}
+		
+			.table__cell:last-child {
+				border-bottom-right-radius: 10px;
+			}
+		}
+	}
+	&__row {
+		&:last-child {
+			.table__cell {
+				border-bottom: 2px solid var(--color-grey-15);
+			}
+		}
+	}
+	
+}
