@@ -1259,6 +1259,12 @@ body {
 }
 
 .feature {
+	&:nth-child(2n) {
+		.feature__header._horizontal:before {
+			bottom: -7px;
+			top: auto;
+		}
+	}
 	&__header {
 		padding: 30px;
 		position: relative;
@@ -1268,6 +1274,20 @@ body {
 		}
 		@include media(">=xl") {
 			padding: 50px;
+		}
+		&._horizontal {
+			&:before {
+				content: '';
+				position: absolute;
+				height: 93px;
+				width: 100%;
+				border-radius: 0;
+				border-left: none;
+				border-right: none;
+				border-top: 2px solid var(--color-grey-15);
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 		&:before {
 			content: '';

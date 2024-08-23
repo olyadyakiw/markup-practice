@@ -11885,6 +11885,10 @@ body {
   }
 }
 
+.feature:nth-child(2n) .feature__header._horizontal:before {
+  bottom: -7px;
+  top: auto;
+}
 .feature__header {
   padding: 30px;
   position: relative;
@@ -11899,6 +11903,18 @@ body {
   .feature__header {
     padding: 50px;
   }
+}
+.feature__header._horizontal:before {
+  content: "";
+  position: absolute;
+  height: 93px;
+  width: 100%;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid var(--color-grey-15);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .feature__header:before {
   content: "";
