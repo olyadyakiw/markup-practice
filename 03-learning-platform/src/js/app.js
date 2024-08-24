@@ -1,4 +1,5 @@
 //= modules/swiper-bundle.js
+//= modules/select.js
 
 isWebp();
 initMenu()
@@ -9,6 +10,7 @@ initAccordion()
 isElementExist('.history', initHistoryItemHeight)
 isElementExist('.gallery', initGallerySlider)
 isElementExist('.gallery', initGalleryFilters)
+isElementExist('select', initCustomSelect)
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);
@@ -260,4 +262,12 @@ function initGalleryFilters() {
             });
         }
     }
+}
+
+function initCustomSelect() {
+	const selectElements = document.querySelectorAll("[data-custom]")
+
+	selectElements.forEach(selectElement => {
+	  new Select(selectElement)
+	})
 }

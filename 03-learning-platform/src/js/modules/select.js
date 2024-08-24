@@ -1,4 +1,4 @@
-export default class Select {
+class Select {
   constructor(element) {
     this.element = element
     this.options = getFormattedOptions(element.querySelectorAll("option"))
@@ -58,18 +58,18 @@ function setupCustomElement(select) {
     optionElement.dataset.value = option.value
     optionElement.addEventListener("click", () => {
       select.selectValue(option.value)
-      select.optionsCustomElement.classList.remove("show")
+      hideOptions(select)
     })
     select.optionsCustomElement.append(optionElement)
   })
   select.customElement.append(select.optionsCustomElement)
 
   select.labelElement.addEventListener("click", () => {
-    select.optionsCustomElement.classList.toggle("show")
+    toggleOptions(select)
   })
 
   select.customElement.addEventListener("blur", () => {
-    select.optionsCustomElement.classList.remove("show")
+    hideOptions(select)
   })
 
   let debounceTimeout
@@ -77,7 +77,7 @@ function setupCustomElement(select) {
   select.customElement.addEventListener("keydown", e => {
     switch (e.code) {
       case "Space":
-        select.optionsCustomElement.classList.toggle("show")
+        toggleOptions(select)
         break
       case "ArrowUp": {
         const prevOption = select.options[select.selectedOptionIndex - 1]
@@ -95,7 +95,7 @@ function setupCustomElement(select) {
       }
       case "Enter":
       case "Escape":
-        select.optionsCustomElement.classList.remove("show")
+        hideOptions(select)
         break
       default: {
         clearTimeout(debounceTimeout)
@@ -113,6 +113,17 @@ function setupCustomElement(select) {
       }
     }
   })
+}
+
+// Helper functions to manage options visibility
+function toggleOptions(select) {
+  const isShown = select.optionsCustomElement.classList.toggle("show")
+  select.customElement.classList.toggle("show", isShown)
+}
+
+function hideOptions(select) {
+  select.optionsCustomElement.classList.remove("show")
+  select.customElement.classList.remove("show")
 }
 
 function getFormattedOptions(optionElements) {

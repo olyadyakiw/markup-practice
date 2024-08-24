@@ -1,0 +1,160 @@
+@@include('html/head.html',{
+    "title": "Contact"
+})
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+
+            <section class="section hero-inner">
+                <div class="container _lg">
+                    <div class="hero-inner__box box">
+                        <div class="section__header _row">
+                            <div class="section__title">
+                                <span class="section__tag">Contact Us</span>
+                                <h2 class="h3">Feel Free To Connect With Us</h2>
+                            </div>
+                            <div class="section__content">
+                                <p class="section__text">
+                                    We value open communication and are eager to assist you with any inquiries. Feel free to reach out to us through any of
+                                    the following contact methods
+                                </p>
+                                <ul class="info">
+                                    <li class="info__item">
+                                        <span class="info__icon">
+                                            <svg width="24" height="24">
+                                                <use href="img/sprite-icons.svg#message" />
+                                            </svg>
+                                        </span>
+                                        <a href="mailto:hello@littlelearners.com" class="info__text text">hello@littlelearners.com</a>
+                                    </li>
+                                    <li class="info__item">
+                                        <span class="info__icon">
+                                            <svg width="24" height="24">
+                                                <use href="img/sprite-icons.svg#phone" />
+                                            </svg>
+                                        </span>
+                                        <a href="tel:+9191813232309" class="info__text text">+91 91813 23 2309</a>
+                                    </li>
+                                    <li class="info__item">
+                                        <span class="info__icon">
+                                            <svg width="24" height="24">
+                                                <use href="img/sprite-icons.svg#map" />
+                                            </svg>
+                                        </span>
+                                        <span class="info__text text">Somewhere in the World</span>
+                                    </li>
+                                    <li class="info__item">
+                                        <span class="info__icon">
+                                            <svg width="24" height="24">
+                                                <use href="img/sprite-icons.svg#clock" />
+                                            </svg>
+                                        </span>
+                                        <span class="info__text text">Office Hours - 9am - 6 pm</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section__header">
+                        <span class="section__tag">Contact Form</span>
+                        <h2 class="h1">Student Information</h2>
+                        <p class="section__text">
+                            If you have specific questions or wish to request more information about Little Learners Academy, please complete the
+                            contact form below. Kindly provide the following details to help us better understand your needs
+                        </p>
+                    </div>
+
+                    <div class="contact-section box">
+                        <ul class="contact-socials">
+                            <li class="contact-social">
+                                <a href="#" class="contact-social__link">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#facebook" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contact-social">
+                                <a href="#" class="contact-social__link">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#twitter" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contact-social">
+                                <a href="#" class="contact-social__link">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#linkedin" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <form class="contact-form">
+                            <label class="contact-form__label">
+                                <span>
+                                    Parent Name
+                                </span>
+                                <input type="text" class="contact-form__input" placeholder="Enter Parent Name">
+                            </label>
+                            <label class="contact-form__label">
+                                <span>
+                                    Email Address
+                                </span>
+                                <input type="email" class="contact-form__input" placeholder="Enter Email Address">
+                            </label>
+                            <label class="contact-form__label">
+                                <span>
+                                    Phone Number
+                                </span>
+                                <input type="tel" class="contact-form__input" placeholder="Enter Phone Number">
+                            </label>
+                            <label class="contact-form__label">
+                                <span>
+                                    Student Name
+                                </span>
+                                <input type="text" class="contact-form__input" placeholder="Enter Student Name">
+                            </label>
+                            <label class="contact-form__label">
+                                <span>
+                                    Student Age
+                                </span>
+                                <input type="number" class="contact-form__input" placeholder="Enter Student Age">
+                            </label>
+                            <label class="contact-form__label">
+                                <span>
+                                    Program of Intrest
+                                </span>
+                                <select class="contact-form__select" data-custom>
+                                    <option value="select" class="contact-form__option">Select Program</option>
+                                    <option value="option1" class="contact-form__option">Option 1</option>
+                                    <option value="option2" class="contact-form__option">Option 2</option>
+                                    <option value="option3" class="contact-form__option">Option 3</option>
+                                    <option value="option4" class="contact-form__option">Option 4</option>
+                                </select>
+                            </label>
+                            <label class="contact-form__label _w-100">
+                                <span>
+                                    Message
+                                </span>
+                                <textarea class="contact-form__textarea" placeholder="Enter your Message"></textarea>
+                            </label>
+                            <button class="contact-form__button">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>    
+
+        </main> 
+    </div>
+    
+
+    @@include('html/footer.html',{})
+    @@include('html/includes.html',{})
+</body>
+</html>
