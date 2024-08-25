@@ -1,5 +1,6 @@
 //= modules/swiper-bundle.js
 //= modules/select.js
+//= modules/aos.js
 
 isWebp();
 initMenu()
@@ -11,6 +12,11 @@ isElementExist('.history', initHistoryItemHeight)
 isElementExist('.gallery', initGallerySlider)
 isElementExist('.gallery', initGalleryFilters)
 isElementExist('select', initCustomSelect)
+AOS.init({
+	duration: 800,
+	once: true,
+  	easing: 'ease-in-out'
+});
 
 function isElementExist(_el, _cb) {
 	var elem = document.querySelector(_el);

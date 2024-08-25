@@ -271,13 +271,13 @@ body {
 }
 
 .hero {
-	padding-top: 0;
-	margin-top: 35px;
+	padding-top: 0 !important;
+	margin-top: 35px !important;
 	@include media(">desktop") {
-		margin-top: 40px;
+		margin-top: 40px !important;
 	}
 	@include media(">=xl") {
-		margin-top: 70px;
+		margin-top: 70px !important;
 	}
 	&__inner {
 		display: flex;
@@ -724,6 +724,7 @@ body {
 	top: auto;
 	left: calc(50% + 15px);
 	transition: background .4s;
+	user-select: none;
 
 	@include media(">desktop") {
 		right: 0;
