@@ -1,0 +1,31 @@
+// fonts
+$ff-inter: 'Inter';
+
+$base-main-font: $ff-inter;
+$base-font-sans-serif: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $ff-inter;
+
+// Container
+$gutter: 20px;
+$container: (
+	"default": 1312px
+);
+
+// Headers
+$h1-h6-font-size: (
+	// --------- h1 ---- h2 ----h3 ---- h4 -- h5 -- h6 ---
+	"default": (24px, 20px, 18px, 16px, 14px, 14px),
+	"tablet": (28px, 22px, 18px, 16px, 14px, 14px),
+	"desktop": (3.2rem, 2.4rem, 2rem, 18px, 16px, 14px),
+);
+
+$colors: (
+	"black": #222531,
+	"purple": #ECEDFF,
+	"grey": #616E85,
+	"grey-light": #EFF2F5,
+	"orange": #F18C5C,
+	"blue": #4C57FB,
+	"white": #ffffff
+);

@@ -1,0 +1,189 @@
+@@include('html/head.html',{
+    "title": "Home"
+})
+<body>
+    <div class="wrapper">
+        <main class="main">
+
+            <div class="dashboard">
+                <div class="container">
+                    <div class="dashboard-header">
+                        <div class="dashboard-intro">
+                            <h1>Dashboard intro title</h1>
+                            <p class="dashboard-intro__text">
+                                Ac vulputate purus semper fusce at. Non dolor in cras.
+                            </p>
+                        </div>
+                        <ul class="tabs">
+                            <li>
+                                <button class="tab-button">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#chart" />
+                                    </svg>
+                                    Compare
+                                </button>
+                            </li>
+                            <li>
+                                <button class="tab-button active">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#case" />
+                                    </svg>
+                                    Managers
+                                </button>
+                            </li>
+                            <li>
+                                <button class="tab-button">
+                                    <svg>
+                                        <use href="img/sprite-icons.svg#person" />
+                                    </svg>
+                                    Employees
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="dashboard-content">
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">RLQ</h3>
+                                <button class="dashboard-item__info">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#info" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="wave-chart">
+                                <div class="wave-chart__content">
+                                    <h4 class="wave-chart__title h2">59,47%</h4>
+                                    <span class="wave-chart__count">
+                                        <svg width="16" height="16">
+                                            <use href="img/sprite-icons.svg#person" />
+                                        </svg>
+                                        56 884
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">KI</h3>
+                                <button class="dashboard-item__info">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#info" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="dashboard-item__content">
+                                <!-- assume that there may be a plugin here -->
+                                <div class="ki-chart">
+                                    <img src="img/chart.jpg" alt="chart">
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">MZI</h3>
+                                <button class="dashboard-item__info">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#info" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="dashboard-item__content">
+                                <div class="mzi-chart">
+                                    <ul class="mzi-chart__indicates">
+                                        <li class="mzi-chart__indicate">😡</li>
+                                        <li class="mzi-chart__indicate">😐</li>
+                                        <li class="mzi-chart__indicate">😀</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">Survey Topics</h3>
+                            </div>
+                            <div class="dashboard-item__content">
+                                <ol class="topics">
+                                    <li class="topic">Pulvinar iaculis placerat vitae dui</li>
+                                    <li class="topic">Massa morbi mattis lectus ornare</li>
+                                    <li class="topic">Diam sem vestibulum purus morbi</li>
+                                    <li class="topic">Pulvinar iaculis placerat vitae dui</li>
+                                    <li class="topic">Pulvinar iaculis placerat vitae dui</li>
+                                </ol>
+                            </div>
+                        </li>
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">Survey Topics Scores</h3>
+                                <button class="dashboard-item__info">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#info" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="dashboard-item__content">
+                                <div class="chart-container">
+                                    <canvas id="chart"></canvas>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="dashboard-item">
+                            <div class="dashboard-item__header">
+                                <h3 class="dashboard-item__title">KPs</h3>
+                                <button class="dashboard-item__info">
+                                    <svg width="16" height="16">
+                                        <use href="img/sprite-icons.svg#info" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="dashboard-item__content">
+                                <div class="chart-container">
+                                    <canvas id="kps-chart"></canvas>
+                                </div>
+                                <div class="legend">
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #5155C3;"></div>
+                                        <span class="legend__text">KP 1</span>
+                                    </div>
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #597DBE;"></div>
+                                        <span class="legend__text">KP 2</span>
+                                    </div>
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #5F99BB;"></div>
+                                        <span class="legend__text">KP 3</span>
+                                    </div>
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #65B8B7;"></div>
+                                        <span class="legend__text">KP 4</span>
+                                    </div>
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #6CDDB1;"></div>
+                                        <span class="legend__text">KP 5</span>
+                                    </div>
+                                    <div class="legend__item">
+                                        <div class="legend__color" style="background-color: #A7A8AD;"></div>
+                                        <span class="legend__text">KP 6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+
+                    </ul>
+                </div>
+            </div>
+
+        </main> 
+    </div>
+    
+
+    @@include('html/includes.html',{})
+</body>
+</html>
