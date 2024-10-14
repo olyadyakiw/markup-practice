@@ -1,0 +1,37 @@
+document.addEventListener('load', () => {
+    isWebp();
+    // isElementExist("class", function);
+})
+
+function isElementExist(_el, _cb) {
+	var elem = document.querySelector(_el);
+
+	if (document.body.contains(elem)) {
+		try {
+			_cb();
+		} catch(e) {
+			console.log(e);
+		}
+	}
+}
+
+function isWebp() {
+    function testWebP(callback) {
+
+        var webP = new Image()
+        webP.onload = webP.onerror = function () {
+            callback(webP.height == 2)
+        };
+        webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA"
+    }
+    
+    testWebP(function (support) {
+    
+        if (support == true) {
+            document.querySelector('body').classList.add('webp')
+        } else {
+            document.querySelector('body').classList.add('no-webp')
+        }
+    })
+}
+
