@@ -6,29 +6,44 @@
 </head>
 <body class="font-body font-medium text-sm">
     <div class="wrapper">
-        <header class="bg-champagne py-6">
+        <header class="bg-champagne py-3 lg:py-6">
     <div class="container">
         <div class="flex justify-between items-center gap-[124px]">
-            <a href="#">
-                <img src="img/logo.svg" alt="logo">
+            <a class="flex aspect-square shrink-0" href="#">
+                <img class="w-full h-full" src="img/logo.svg" alt="logo">
             </a>
-            <div class="flex justify-between items-center w-full font-bold">
+            <div id="header-content" class="header-content">
                 <nav class="">
-                    <ul class="flex">
-                        <li><a class="pe-8 hover:text-red transition duration-300" href="#">Episodes</a></li>
-                        <li><a class="px-8 hover:text-red transition duration-300" href="#">About</a></li>
-                        <li><a class="ps-8 hover:text-red transition duration-300" href="#">Blog</a></li>
+                    <ul class="flex flex-col gap-3 lg:flex-row">
+                        <li>
+                            <a class="text-3xl lg:text-[1rem] lg:pe-8 hover:text-red transition duration-300" href="#">
+                                Episodes
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-3xl lg:text-[1rem] lg:px-8 hover:text-red transition duration-300" href="#">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-3xl lg:text-[1rem] lg:ps-8 hover:text-red transition duration-300" href="#">
+                                Blog
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                <div class="flex gap-5 items-center">
+                <div class="flex flex-col text-center lg:text-left lg:flex-row gap-5 lg:items-center">
                     <a class="btn" href="#">RECENT EPISODES</a>
-                    <a class="btn bg-black text-white shadow-btn" href="#">SUBSCRIBE</a>
+                    <a class="btn bg-black text-white shadow-btn" href="#"> SUBSCRIBE </a>
                 </div>
             </div>
-            
+            <button id="nav-opener" class="nav-opener lg:hidden">
+                <span></span>
+            </button>
         </div>
     </div>
 </header>
+
         <main class="main">
 
             
