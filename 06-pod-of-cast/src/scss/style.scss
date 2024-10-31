@@ -45,3 +45,14 @@
         @apply top-24;
     }
 }
+
+.link-icon {
+    svg {
+        @apply transition duration-300;
+    }
+    &:hover {
+        svg {
+            @apply fill-red;
+        }
+    }
+}

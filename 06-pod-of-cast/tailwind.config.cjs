@@ -36,6 +36,7 @@ export default {
             white: '#ffffff',
             gray: {
                 300: '#f7fafc',
+                400: '#4D4D4D',
                 600: '#244000',
                 900: '#1a202c',
             },
