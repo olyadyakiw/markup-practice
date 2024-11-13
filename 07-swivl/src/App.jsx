@@ -4,7 +4,8 @@ import Header from './components/Header'
 
 import { theme } from './components/styled/global/Theme'
 import GlobalStyles from './components/styled/global/Global'
-import { Container } from './components/styled/Container.styled'
+import { Container } from './components/styled/global/Container.styled'
+import { Button } from './components/styled/global/Button.styled'
 
 function App() {
 
@@ -17,7 +18,11 @@ function App() {
         <Header />
         
         <Container>
-          <h1>Hello!</h1>
+          <Button>
+            <svg>
+                <use href="/public/sprite-icons.svg#plus" />
+            </svg>
+          </Button>
         </Container>
 
       </ThemeProvider>
