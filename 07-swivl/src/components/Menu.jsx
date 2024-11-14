@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-import { MenuButton, MenuList, MenuItem, MenuLink } from "./styled/Menu.styled"
+import { MenuWrapper, MenuButton, MenuList, MenuItem, MenuLink } from "./styled/Menu.styled"
 
 const Menu = () => {
 
@@ -25,7 +25,7 @@ const Menu = () => {
     }, []);
 
     return (
-        <div ref={menuRef}>
+        <MenuWrapper ref={menuRef}>
             <MenuButton onClick={toggleMenu}>
                 <svg>
                     <use href="/sprite-icons.svg#dots" />
@@ -36,7 +36,7 @@ const Menu = () => {
                   <MenuItem>
                     <MenuLink href="#">
                       <svg>
-                        <use href="/sprite-icons.svg#edit" />
+                        <use href="/sprite-icons.svg#report" />
                       </svg>
                       Report User
                     </MenuLink>
@@ -44,14 +44,14 @@ const Menu = () => {
                   <MenuItem>
                     <MenuLink href="#">
                       <svg>
-                        <use href="/sprite-icons.svg#edit" />
+                        <use href="/sprite-icons.svg#block" />
                       </svg>
                       Block User
                     </MenuLink>
                   </MenuItem>
                 </MenuList>
             )}
-        </div>
+        </MenuWrapper>
     )
 }
 

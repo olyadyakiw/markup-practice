@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+export const MenuWrapper = styled.div`
+    margin-left: auto;
+`
+
 export const MenuButton = styled.button`
     border: none;
     background-color: transparent;
@@ -21,7 +25,7 @@ export const MenuButton = styled.button`
 export const MenuList = styled.ul`
     list-style: none;
     position: absolute;
-    right: calc(-50% + 20px);
+    right: calc(-50% + 5px);
     top: 1.75rem;
     max-width: 12rem;
     width: 100%;
@@ -51,5 +55,6 @@ export const MenuLink = styled.a`
     svg {
         width: 20px;
         height: 20px;
+        fill: ${({ theme }) => theme.colors.text};
     }
 `
