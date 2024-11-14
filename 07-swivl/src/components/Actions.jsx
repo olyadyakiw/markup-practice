@@ -5,17 +5,17 @@ const Actions = () => {
     <ActionsStyled>
         <ActionIcon href="#">
             <svg>
-                <use href="/public/sprite-icons.svg#bell" />
+                <use href="/sprite-icons.svg#bell" />
             </svg>
         </ActionIcon>
         <ActionIcon href="#">
             <svg>
-                <use href="/public/sprite-icons.svg#gift" />
+                <use href="/sprite-icons.svg#gift" />
             </svg>
         </ActionIcon>
         <ActionIcon href="#">
             <svg>
-                <use href="/public/sprite-icons.svg#medium" />
+                <use href="/sprite-icons.svg#medium" />
             </svg>
         </ActionIcon>
     </ActionsStyled>

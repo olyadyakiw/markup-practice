@@ -1,4 +1,5 @@
-import { ArrowIcon, UserName, UserAvatar, UserStyled } from "./styled/User.styled"
+import { ArrowIcon, UserName, UserStyled } from "./styled/User.styled"
+import { Avatar } from './styled/global/Avatar.styled'
 
 const User = () => {
   return (
@@ -6,9 +7,9 @@ const User = () => {
         <UserName>
             Arthur Wood
         </UserName>
-        <UserAvatar src="/user-avatar.jpg" alt="Arthur's Wood Avatar" />
+        <Avatar width="32" height="32" src="/user-avatar.jpg" alt="Arthur's Wood Avatar" />
         <ArrowIcon>
-            <use href="/public/sprite-icons.svg#arrow" />
+            <use href="/sprite-icons.svg#arrow" />
         </ArrowIcon>
     </UserStyled>
   )

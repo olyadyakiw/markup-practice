@@ -9,8 +9,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: 'Open Sans';
-        font-size: 16px;
+        font-family: ${({ theme }) => theme.fonts.base};
+        font-size: ${({ theme }) => theme.fontSizes.base};
         background-color: ${({ theme }) => theme.colors.body};
         color: ${({ theme }) => theme.colors.text};
         margin: 0;

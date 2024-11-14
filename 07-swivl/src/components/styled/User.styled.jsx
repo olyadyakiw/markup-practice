@@ -33,10 +33,3 @@ export const UserName = styled.span`
         display: none;
     }
 `
-
-export const UserAvatar = styled.img`
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-`
