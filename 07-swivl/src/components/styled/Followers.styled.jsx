@@ -6,6 +6,15 @@ export const FollowersList = styled.ul`
     margin: 0;
     display: flex;
     gap: 3rem;
+    @media (max-width: 1025px) {
+        gap: 1.6rem;
+    }
+    @media (max-width: 767px) {
+        max-width: 300px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
 `
 
 export const FollowersItem = styled.li`

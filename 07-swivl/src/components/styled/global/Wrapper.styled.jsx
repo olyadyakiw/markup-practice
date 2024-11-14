@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
     gap: 3rem;
     padding: 4.5rem 0;
 
-    @media (max-width: 768) {
+    @media (max-width: 1025px) {
         flex-direction: column;
+        padding: 3rem 0;
     }
 `

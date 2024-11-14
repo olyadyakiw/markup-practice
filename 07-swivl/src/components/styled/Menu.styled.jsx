@@ -2,6 +2,10 @@ import styled from "styled-components"
 
 export const MenuWrapper = styled.div`
     margin-left: auto;
+    @media (max-width: 1025px) {
+        align-self: flex-start;
+        margin-top: 1rem;
+    }
 `
 
 export const MenuButton = styled.button`
@@ -25,14 +29,20 @@ export const MenuButton = styled.button`
 export const MenuList = styled.ul`
     list-style: none;
     position: absolute;
-    right: calc(-50% + 5px);
-    top: 1.75rem;
+    right: 0;
+    transform: translateX(85%);
+    top: 1.5rem;
     max-width: 12rem;
     width: 100%;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(11px);
     padding: 1.5rem 0;
+
+    @media (max-width: 668px) {
+        transform: translate(0);
+        top: 2rem;
+    }
 `
 
 export const MenuItem = styled.li`

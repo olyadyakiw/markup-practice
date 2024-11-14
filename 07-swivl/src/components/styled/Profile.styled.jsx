@@ -6,16 +6,36 @@ export const ProfileWrapper = styled.div`
     gap: 1.5rem;
     position: relative;
     max-width: 22rem;
+
+    @media (max-width: 1025px) {
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (max-width: 769px) {
+       justify-content: center;
+    }
 `
 
 export const ProfileDetails = styled.div`
     display: flex;
     gap: 1.5rem;
     margin-bottom: 0.5rem;
+    position: relative;
+    @media (max-width: 1025px) {
+        align-items: center;
+        gap: 1rem;
+    }
 `
 
 export const ProfileInfo = styled.div`
     max-width: 9rem;
+    @media (max-width: 1025px) {
+        max-width: 100%;
+    }
 `
 
 export const ProfileTitle = styled.h2`
@@ -23,6 +43,10 @@ export const ProfileTitle = styled.h2`
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0 0 0.5rem;
+
+    @media (max-width: 666px) {
+        font-size: 1.25rem;
+    }
 `
 
 export const ProfileLink = styled.a`
