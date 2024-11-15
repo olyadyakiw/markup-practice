@@ -1,25 +1,21 @@
 import { ActionsStyled, ActionIcon } from "./styled/Actions.styled"
 
+const iconIds = ['bell', 'gift', 'medium'];
+
 const Actions = () => {
   return (
     <ActionsStyled>
-        <ActionIcon href="#">
-            <svg>
-                <use href="/sprite-icons.svg#bell" />
-            </svg>
+      {iconIds.map((iconId) => (
+        <ActionIcon key={iconId} href="#" aria-label={iconId}>
+          <svg>
+            <use href={`/sprite-icons.svg#${iconId}`} />
+          </svg>
         </ActionIcon>
-        <ActionIcon href="#">
-            <svg>
-                <use href="/sprite-icons.svg#gift" />
-            </svg>
-        </ActionIcon>
-        <ActionIcon href="#">
-            <svg>
-                <use href="/sprite-icons.svg#medium" />
-            </svg>
-        </ActionIcon>
+      ))}
     </ActionsStyled>
   )
 }
+
+
 
 export default Actions

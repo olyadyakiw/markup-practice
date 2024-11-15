@@ -14,7 +14,7 @@ export const Button = styled.button`
     justify-content: center;
     align-items: center;
     border: none;
-    transition: all .4s;
+    transition: transform .4s;
     &:hover {
         scale: 1.1;
         transform-origin: center center;

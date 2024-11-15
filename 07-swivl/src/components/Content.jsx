@@ -12,7 +12,7 @@ const Content = () => {
       <CardsGrid>
         <Card title='New air routes that promise cheap flights in' name="Gregory Watkins" />
         <Card title='New air routes that promise cheap flights in' name="Gregory Watkins" />
-        <Card shared="true" title='New air routes that promise cheap flights in' name="Gregory Watkins" />
+        <Card shared="true" tag="#discussionaboutanimgttdds…" title='New air routes that promise cheap flights in' name="Gregory Watkins" />
         <Card shared="true" weblink="true" title='New air routes that promise cheap flights in' name="Gregory Watkins" />
       </CardsGrid>
 

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 1210px;
+    max-width: ${({ theme }) => (theme.container.padding * 2) + +theme.container.width }px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 ${({ theme }) => theme.container.padding}px;
     position: relative;
 `

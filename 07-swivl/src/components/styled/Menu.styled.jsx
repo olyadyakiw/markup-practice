@@ -27,11 +27,10 @@ export const MenuButton = styled.button`
 `
 
 export const MenuList = styled.ul`
-    list-style: none;
     position: absolute;
     right: 0;
     transform: translateX(85%);
-    top: 1.5rem;
+    top: 2.5rem;
     max-width: 12rem;
     width: 100%;
     border-radius: 8px;
@@ -39,9 +38,12 @@ export const MenuList = styled.ul`
     backdrop-filter: blur(11px);
     padding: 1.5rem 0;
 
+    @media (max-width: 1025px) {
+        top: 3.5rem;
+    }
+
     @media (max-width: 668px) {
         transform: translate(0);
-        top: 2rem;
     }
 `
 
@@ -54,7 +56,6 @@ export const MenuItem = styled.li`
 `
 
 export const MenuLink = styled.a`
-    color: inherit;
     display: flex;
     align-items: center;
     gap: 1rem;

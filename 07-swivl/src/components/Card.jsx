@@ -1,24 +1,25 @@
+/* eslint-disable react/prop-types */
 import { Avatar } from './styled/global/Avatar.styled'
 
 import Stats from './Stats'
 
 import { CardWrapper, CardTitle, CardTop, CardBottom, CardUser, CardName, CardShare, CardTag  } from "./styled/Cards.styled"
 
-const Card = ({ title, name, shared = false, weblink = false }) => {
+const Card = ({ title, name, shared = false, weblink = false, tag }) => {
   return (
     <CardWrapper>
-        {shared && weblink ? (
+        {shared ? (
             <CardTop>
-                <svg> 
-                    <use href="/sprite-icons.svg#share" />
-                </svg>
-                Shared via weblink
-            </CardTop>
-        ) : null}
-        {shared && !weblink ? (
-            <CardTop>
-                Shared to
-                <CardTag href="#">#discussionaboutanimgttdds…</CardTag>
+                
+                {weblink ? 
+                    <svg> 
+                        <use href="/sprite-icons.svg#share" />
+                    </svg> 
+                    : null
+                }
+                {weblink ? "Shared via weblink" : "Shared to"}
+
+                {!weblink && <CardTag href="#">{tag}</CardTag>}
             </CardTop>
         ) : null}
         <CardTitle>{title}</CardTitle>

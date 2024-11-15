@@ -42,7 +42,7 @@ export const ProfileTitle = styled.h2`
     font-family: ${({ theme }) => theme.fonts.accent};
     font-size: 1.5rem;
     font-weight: 600;
-    margin: 0 0 0.5rem;
+    margin-bottom: 0.5rem;
 
     @media (max-width: 666px) {
         font-size: 1.25rem;
@@ -51,7 +51,6 @@ export const ProfileTitle = styled.h2`
 
 export const ProfileLink = styled.a`
     display: inline-block;
-    color: inherit;
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: -0.5px;

@@ -12,5 +12,9 @@ export const theme = {
     },
     fontSizes: {
         base: '16px',
+    },
+    container: {
+        width: '1170',
+        padding: '20'
     }
 }
